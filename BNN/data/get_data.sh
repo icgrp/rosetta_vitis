@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 CURR_DIR=`pwd`
-DIR="$( cd "$( dirname "${BASH_ROUCE[0]}" )" && pwd )"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
 
 declare -a files=("cifar10_test_inputs.zip" "cifar10_test_labels.zip" 
