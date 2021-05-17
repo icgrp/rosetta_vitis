@@ -1,5 +1,6 @@
 # Rosetta: A Realistic High-level Synthesis Benchmark Suite for Software Programmable FPGAs
 ## Modifications for Vitis 2020.2
+
 We modify the orignal benchmarks and compile them with Vitis 2020.2 instead of SDSoC(2017.1-2019.1)
 The target devide is [Alveo U50](https://www.xilinx.com/products/boards-and-kits/alveo/u50.html).
 The main modifications includes:
@@ -10,6 +11,7 @@ as an alternative for **optical flow** benchmark.
 3. Change the Makefile for Vitis compilation.
 
 ## Setup for Alveo U50
+
 The tools you need to install includes:
 -------------------------------------------------------------------------------------------
 1. [Vitis 2020.2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2020-2.html)
@@ -24,9 +26,55 @@ source <Vitis installation dir>/Vitis/2020.2/settings64.sh
 source <opt/xilinx/xrt/setup.sh
 ```
 
+1. rendering
+
+```c
+cd $(REPO_ROOT)/3d-rendering/hw
+make
+./host.exe
+```
  
+2. BNN
 
+```c
+cd $(REPO_ROOT)/BNN
+make
+source ./setup.sh
+cd ./accel
+./host.exe
+```
 
+3. digit-recognition
+
+```c
+cd $(REPO_ROOT)/digit-recognition/hw
+make
+./host.exe
+```
+
+4. face-detection
+
+```c
+cd $(REPO_ROOT)/face-detection/hw
+make
+./host.exe
+```
+
+5. optical-flow
+
+```c
+cd $(REPO_ROOT)/optical-flow/hw
+make
+./host.exe
+```
+
+6. spam-filter
+
+```c
+cd $(REPO_ROOT)/spam-filter/hw
+make
+./host.exe
+```
 
 
 ## Publication
