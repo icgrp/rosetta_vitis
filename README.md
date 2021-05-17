@@ -75,6 +75,25 @@ make
 ./host.exe
 ```
 
+## Compile Time and Performance
+The compile time comes from quark with 4 jobs.
+
+| Benchmark  | HLS   |Verilog2Bit|Kernel Frequency|Runtime (ms) |
+|:----------:|:-----:|:---------:|:--------------:|:-----------:|
+|3D Rendering|0h7m30s|1h21m3s|300MHz|1.6ms|
+|Digit Recognition<sup>1</sup>|0h2m47s|1h48m11s|300MHz|10.5ms|
+|Spam Filtering<sup>2</sup>|0h1m16s|1h27m47s|300MHz|3.5ms|
+|Optical Flow|0h6m42s|1h52m59s|200MHz|13.6ms|
+|BNN<sup>3</sup>|0h7m50s|1h42m20s|300MHz|5250ms|
+|Face Detection|0h24m47s|1h54m6s|150MHz|24.1ms|
+
+1: K=3, `PAR_FACTOR`=40.
+
+2: Five epochs, `PAR_FACTOR`=32, `VDWIDTH`=512.
+
+
+
+
 
 ## Publication
 -------------------------------------------------------------------------------------------
