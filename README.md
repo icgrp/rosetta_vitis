@@ -91,6 +91,7 @@ The compile time comes from quark with 4 jobs.
 
 2: Five epochs, `PAR_FACTOR`=32, `VDWIDTH`=512.
 
+3: 1000 test images.
 
 
 
