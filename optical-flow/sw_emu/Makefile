@@ -1,5 +1,5 @@
 PRJ_NAME=optical_flow
-SRC_DIR=/home/ylxiao/eclipse-workspace/$(PRJ_NAME)_vitis/src
+SRC_DIR=../src
 #img_src=$(basename $(notdir $(wildcard $(SRC_DIR)/imageLib/*.cpp)))
 img_name=$(basename $(wildcard $(SRC_DIR)/imageLib/*.cpp))
 img_obj=$(addsuffix .o, $(img_name))

@@ -1,4 +1,33 @@
 # Rosetta: A Realistic High-level Synthesis Benchmark Suite for Software Programmable FPGAs
+## Modifications for Vitis 2020.2
+We modify the orignal benchmarks and compile them with Vitis 2020.2 instead of SDSoC(2017.1-2019.1)
+The target devide is [Alveo U50](https://www.xilinx.com/products/boards-and-kits/alveo/u50.html).
+The main modifications includes:
+-------------------------------------------------------------------------------------------
+1. Change the host.cpp for all the benchmarks. Use OpenCL interface as the DMA driver.
+2. As <hls_video.h> has been deprecated from Vitis 2020.1, we use <multimediaIps/xf_video_mem.hpp>
+as an alternative for **optical flow** benchmark.
+3. Change the Makefile for Vitis compilation.
+
+## Setup for Alveo U50
+The tools you need to install includes:
+-------------------------------------------------------------------------------------------
+1. [Vitis 2020.2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2020-2.html)
+2. [xrt 2020.2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/alveo/u50.html)
+3. [u50 deployment](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/alveo/u50.html)
+
+## Compile and Run Benchmarks
+Set up the tools environments.
+
+```c
+source <Vitis installation dir>/Vitis/2020.2/settings64.sh
+source <opt/xilinx/xrt/setup.sh
+```
+
+ 
+
+
+
 
 ## Publication
 -------------------------------------------------------------------------------------------

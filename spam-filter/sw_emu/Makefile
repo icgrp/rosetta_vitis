@@ -1,5 +1,5 @@
 PRJ_NAME=spam_filter
-SRC_DIR=/home/ylxiao/eclipse-workspace/$(PRJ_NAME)_vitis/src
+SRC_DIR=../src
 
 all: app.exe emconfig.json $(PRJ_NAME).xclbin
 
