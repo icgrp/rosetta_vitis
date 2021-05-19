@@ -75,7 +75,7 @@ make
 ./host.exe
 ```
 
-## Compile Time and Performance
+## Compile Time and Performance for Alveo U50
 The compile time comes from quark with 4 jobs.
 
 | Benchmark  | HLS   |Verilog2Bit|Kernel Frequency|Runtime (ms) |
@@ -93,6 +93,24 @@ The compile time comes from quark with 4 jobs.
 
 3: 1000 test images.
 
+
+## Compile Time and Performance for ZCU102
+The compile time comes from quark with 4 jobs.
+
+| Benchmark  | HLS   |Verilog2Bit|Kernel Frequency|Runtime (ms) |
+|:----------:|:-----:|:---------:|:--------------:|:-----------:|
+|3D Rendering|0h4m5s|0h15m37s|200MHz|2.3ms|
+|Digit Recognition<sup>1</sup>|0h2m2s|0h28m32s|200MHz|15.8ms|
+|Spam Filtering<sup>2</sup>|0h0m59s|0h27m39s|200MHz|6.9ms|
+|Optical Flow|0h2m23s|0h22m15s|200MHz|13.5ms|
+|BNN<sup>3</sup>|NA|NA|NA|NA|
+|Face Detection|0h25m33s|0h37m33s|200MHz|20.99ms|
+
+1: K=3, `PAR_FACTOR`=40.
+
+2: Five epochs, `PAR_FACTOR`=32, `VDWIDTH`=512.
+
+3: 1000 test images.
 
 
 
