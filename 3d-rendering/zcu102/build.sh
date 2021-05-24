@@ -4,12 +4,13 @@ root_dir=$(pwd)
 cd -
 
 
-export PLATFORM_REPO_PATHS=${root_dir}/embedded_platform/zcu102_custom
-export ROOTFS=${root_dir}/embedded_platform/linux
+export PLATFORM_REPO_PATHS=${root_dir}/platform/embedded_platform/zcu102_custom
+export ROOTFS=${root_dir}/platform/embedded_platform/linux
 export kl_name=rendering
 export MaxJobNum=$(nproc)
-source ${root_dir}/embedded_platform/sdkdir/environment-setup-aarch64-xilinx-linux
-source /opt/Xilinx/Vitis/2020.2/settings64.sh
+source ${root_dir}/platform/embedded_platform/sdkdir/environment-setup-aarch64-xilinx-linux
+#source /opt/Xilinx/Vitis/2020.2/settings64.sh
+source /scratch/unsafe/Xilinx/Vitis/2020.2/settings64.sh
 
 # Make sure everything is up to date
 make all 
