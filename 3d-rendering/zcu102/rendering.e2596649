@@ -17,3 +17,5 @@ In file included from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_common.h:6
 /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_ref.h:414:12:   required from ‘ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(const ap_int_base<_AP_W2, _AP_S2>&) [with int _AP_W2 = 8; bool _AP_S2 = false; int _AP_W = 32; bool _AP_S = false]’
 ../src/host.cpp:86:43:   required from here
 /scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+ERROR: 'parted' command not exist. Please make sure 'parted' command path is in $PATH variable 
+make: *** [Makefile:23: package/sd_card.img] Error 1

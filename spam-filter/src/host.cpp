@@ -86,7 +86,7 @@ int main(int argc, char **argv)
     printf("Spam Filter Application\n");
 
     // parse command line arguments
-    std::string path_to_data("/home/ylxiao/rosetta/spam-filter/data");
+    std::string path_to_data("../data");
     // sdaccel version and sdsoc/sw version have different command line options
 
       //parse_sdsoc_command_line_args(argc, argv, path_to_data);

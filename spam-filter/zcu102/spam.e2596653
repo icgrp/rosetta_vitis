@@ -1,0 +1,314 @@
+stty: 'standard input': Inappropriate ioctl for device
+../src/host.cpp: In function ‘int main(int, char**)’:
+../src/host.cpp:151:25: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  151 |       for (int i = 0; i < NUM_TRAINING * NUM_FEATURES / D_VECTOR_SIZE; i ++ )
+      |                       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/host.cpp:152:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const unsigned int’ [-Wsign-compare]
+  152 |         for (int j = 0; j < D_VECTOR_SIZE; j ++ )
+      |                         ~~^~~~~~~~~~~~~~~
+../src/host.cpp:156:25: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  156 |       for (int i = 0; i < NUM_TRAINING / L_VECTOR_SIZE; i ++ )
+      |                       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/host.cpp:157:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const unsigned int’ [-Wsign-compare]
+  157 |         for (int j = 0; j < L_VECTOR_SIZE; j ++ )
+      |                         ~~^~~~~~~~~~~~~~~
+../src/host.cpp:161:25: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  161 |       for (int i = 0; i < NUM_FEATURES / F_VECTOR_SIZE; i ++ )
+      |                       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/host.cpp:162:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const unsigned int’ [-Wsign-compare]
+  162 |         for (int j = 0; j < F_VECTOR_SIZE; j ++ )
+      |                         ~~^~~~~~~~~~~~~~~
+../src/host.cpp:187:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  187 |     for (int i = 0; i < NUM_FEATURES / F_VECTOR_SIZE; i ++ )
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/host.cpp:188:25: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const unsigned int’ [-Wsign-compare]
+  188 |       for (int j = 0; j < F_VECTOR_SIZE; j ++ )
+      |                       ~~^~~~~~~~~~~~~~~
+../src/host.cpp:140:20: warning: unused variable ‘start’ [-Wunused-variable]
+  140 |     struct timeval start, end;
+      |                    ^~~~~
+../src/host.cpp:140:27: warning: unused variable ‘end’ [-Wunused-variable]
+  140 |     struct timeval start, end;
+      |                           ^~~
+../src/host.cpp: In function ‘float dotProduct(FeatureType*, DataType*, size_t)’:
+../src/host.cpp:274:21: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const size_t’ {aka ‘const long unsigned int’} [-Wsign-compare]
+  274 |   for (int i = 0; i < num_features; i ++ )
+      |                   ~~^~~~~~~~~~~~~~
+In file included from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_common.h:641,
+                 from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int.h:54,
+                 from ../src/typedefs.h:29,
+                 from ../src/host.cpp:38:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 16; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1447:5:   required from ‘ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W, _AP_S, true>&) [with int _AP_W = 16; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:203:13:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>& ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>&) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 2144 |             : (excess_bits ? (((uint64_t)VAL) << (excess_bits)) >> (excess_bits)
+      |               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2145 |                            : (uint64_t)VAL));
+      |                            ~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 8; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1485:1:   required from ‘ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 8; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int.h:301:3:   required from ‘ap_uint<_AP_W>::ap_uint(int) [with int _AP_W = 8]’
+../src/host.cpp:131:19:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 32; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1447:5:   required from ‘ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W, _AP_S, true>&) [with int _AP_W = 32; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:203:13:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>& ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>&) [with int _AP_W = 32; int _AP_I = 13; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:137:25:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 48; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1426:5:   required from ‘ap_private<_AP_W, _AP_S>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 32; bool _AP_S1 = true; int _AP_W = 48; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:1116:9:   required from ‘typename ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::RType<_AP_W2, _AP_I2, _AP_S2>::mult ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator*(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) const [with int _AP_W2 = 16; int _AP_I2 = 4; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::RType<_AP_W2, _AP_I2, _AP_S2>::mult = ap_fixed<48, 17, AP_TRN, AP_WRAP, 0>]’
+../src/host.cpp:275:47:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 32; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1426:5:   required from ‘ap_private<_AP_W, _AP_S>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 33; bool _AP_S1 = true; int _AP_W = 32; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:939:13:   required from ‘float ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::to_float() const [with int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:278:28:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 16; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1447:5:   required from ‘ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W, _AP_S, true>&) [with int _AP_W = 16; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:409:13:   required from ‘ap_int_base<_AP_W, _AP_S>::ap_int_base(const af_range_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 16; int _AP_I2 = 4; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 16; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_ref.h:451:22:   required from ‘ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(const af_range_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 16; int _AP_I2 = 4; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 512; bool _AP_S = false]’
+../src/host.cpp:153:136:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 49; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1426:5:   required from ‘ap_private<_AP_W, _AP_S>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 50; bool _AP_S1 = true; int _AP_W = 49; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:1192:3:   required from ‘typename ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::RType<_AP_W2, _AP_I2, _AP_S2>::plus ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator+(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) const [with int _AP_W2 = 48; int _AP_I2 = 17; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::RType<_AP_W2, _AP_I2, _AP_S2>::plus = ap_fixed<49, 18, AP_TRN, AP_WRAP, 0>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:1212:3:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator+=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 48; int _AP_I2 = 17; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:275:47:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 1; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1647:3:   required from ‘ap_private<_AP_W, _AP_S, true>::ap_private(int) [with int _AP_W = 1; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1768:12:   required from ‘typename ap_private<_AP_W, _AP_S, true>::RType<1, false>::minus ap_private<_AP_W, _AP_S, true>::operator-() const [with int _AP_W = 32; bool _AP_S = true; typename ap_private<_AP_W, _AP_S, true>::RType<1, false>::minus = ap_private<33, true, true>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:939:15:   required from ‘float ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::to_float() const [with int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:278:28:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 54; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1447:5:   required from ‘ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W, _AP_S, true>&) [with int _AP_W = 54; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:569:11:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 54; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1426:5:   required from ‘ap_private<_AP_W, _AP_S>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 54; bool _AP_S1 = true; int _AP_W = 54; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:634:22:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 50; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1650:3:   required from ‘ap_private<_AP_W, _AP_S, true>::ap_private(long unsigned int) [with int _AP_W = 50; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2069:46:   required from ‘typename ap_private<_AP_W, _AP_S, true>::RType<_AP_W2, _AP_S2>::plus ap_private<_AP_W, _AP_S, true>::operator+(const ap_private<_AP_W1, _AP_S1>&) const [with int _AP_W1 = 49; bool _AP_S1 = true; int _AP_W = 49; bool _AP_S = true; typename ap_private<_AP_W, _AP_S, true>::RType<_AP_W2, _AP_S2>::plus = ap_private<50, true, true>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:1192:3:   required from ‘typename ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::RType<_AP_W2, _AP_I2, _AP_S2>::plus ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator+(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) const [with int _AP_W2 = 48; int _AP_I2 = 17; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::RType<_AP_W2, _AP_I2, _AP_S2>::plus = ap_fixed<49, 18, AP_TRN, AP_WRAP, 0>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:1212:3:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator+=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 48; int _AP_I2 = 17; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:275:47:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 49; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1485:1:   required from ‘ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 49; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:243:3:   required from ‘ap_int_base<_AP_W, _AP_S>::ap_int_base(int) [with int _AP_W = 49; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:754:36:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 49; int _AP_I2 = 18; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:1212:3:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator+=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 48; int _AP_I2 = 17; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:275:47:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 33; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1649:3:   required from ‘ap_private<_AP_W, _AP_S, true>::ap_private(long int) [with int _AP_W = 33; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2082:46:   required from ‘typename ap_private<_AP_W, _AP_S, true>::RType<_AP_W2, _AP_S2>::minus ap_private<_AP_W, _AP_S, true>::operator-(const ap_private<_AP_W1, _AP_S1>&) const [with int _AP_W1 = 32; bool _AP_S1 = true; int _AP_W = 1; bool _AP_S = false; typename ap_private<_AP_W, _AP_S, true>::RType<_AP_W2, _AP_S2>::minus = ap_private<33, true, true>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1768:36:   required from ‘typename ap_private<_AP_W, _AP_S, true>::RType<1, false>::minus ap_private<_AP_W, _AP_S, true>::operator-() const [with int _AP_W = 32; bool _AP_S = true; typename ap_private<_AP_W, _AP_S, true>::RType<1, false>::minus = ap_private<33, true, true>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:939:15:   required from ‘float ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::to_float() const [with int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:278:28:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 11; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1426:5:   required from ‘ap_private<_AP_W, _AP_S>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 64; bool _AP_S1 = false; int _AP_W = 11; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1466:11:   required from ‘ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(const _private_range_ref<_AP_W2, _AP_S2>&) [with int _AP_W2 = 64; bool _AP_S2 = false; int _AP_W = 11; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:561:15:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, false>::clearUnusedBits() volatile [with int _AP_W = 65; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:3280:7:   required from ‘ap_private<_AP_W, _AP_S, false>::ap_private(const ap_private<_AP_W, _AP_S, false>&) [with int _AP_W = 65; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_common.h:634:8:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_long, true>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, long int) [with int _AP_W = 11; bool _AP_S = false; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_long, true>::minus = ap_int<65>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:563:19:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:3428:22: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 3427 |               : (excess_bits
+      |                 ~~~~~~~~~~~~
+ 3428 |                      ? ((pVal[_AP_N - 1]) << (excess_bits)) >> (excess_bits)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3429 |                      : pVal[_AP_N - 1]);
+      |                      ~~~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 12; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1426:5:   required from ‘ap_private<_AP_W, _AP_S>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 65; bool _AP_S1 = true; int _AP_W = 12; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:461:13:   required from ‘ap_int_base<_AP_W, _AP_S>& ap_int_base<_AP_W, _AP_S>::operator=(const ap_int_base<_AP_W2, _AP_S2>&) [with int _AP_W2 = 65; bool _AP_S2 = true; int _AP_W = 12; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:563:9:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 2144 |             : (excess_bits ? (((uint64_t)VAL) << (excess_bits)) >> (excess_bits)
+      |               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2145 |                            : (uint64_t)VAL));
+      |                            ~~~~~~~~~~~~~~~~
+In file included from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_common.h:641,
+                 from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int.h:54,
+                 from ../src/typedefs.h:29,
+                 from ../src/host.cpp:38:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, false>::cpSext(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 16; bool _AP_S1 = false; int _AP_W = 512; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5335:7:   required from ‘void ap_private<_AP_W, _AP_S, false>::cpSextOrTrunc(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 16; bool _AP_S1 = false; int _AP_W = 512; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:4598:7:   required from ‘ap_private<_AP_W, _AP_S, false>& ap_private<_AP_W, _AP_S, false>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 16; bool _AP_S1 = false; int _AP_W = 512; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:215:13:   required from ‘ap_int_base<_AP_W, _AP_S>::ap_int_base(const ap_int_base<_AP_W2, _AP_S2>&) [with int _AP_W2 = 16; bool _AP_S2 = false; int _AP_W = 512; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_ref.h:413:31:   required from ‘ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(const ap_int_base<_AP_W2, _AP_S2>&) [with int _AP_W2 = 16; bool _AP_S2 = false; int _AP_W = 512; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_ref.h:451:59:   required from ‘ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(const af_range_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 16; int _AP_I2 = 4; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 512; bool _AP_S = false]’
+../src/host.cpp:153:136:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5292:45: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 5292 |       static const uint64_t mask = wordBits ? (~0ULL << (wordBits)) : 0ULL;
+      |                                    ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5300:43: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 5300 |     static const uint64_t mask = wordBits ? (~0ULL << (wordBits)) : 0ULL;
+      |                                  ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, false>::cpSext(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 32; bool _AP_S1 = false; int _AP_W = 512; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5335:7:   required from ‘void ap_private<_AP_W, _AP_S, false>::cpSextOrTrunc(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 32; bool _AP_S1 = false; int _AP_W = 512; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:4598:7:   required from ‘ap_private<_AP_W, _AP_S, false>& ap_private<_AP_W, _AP_S, false>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 32; bool _AP_S1 = false; int _AP_W = 512; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:215:13:   required from ‘ap_int_base<_AP_W, _AP_S>::ap_int_base(const ap_int_base<_AP_W2, _AP_S2>&) [with int _AP_W2 = 32; bool _AP_S2 = false; int _AP_W = 512; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_ref.h:413:31:   required from ‘ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(const ap_int_base<_AP_W2, _AP_S2>&) [with int _AP_W2 = 32; bool _AP_S2 = false; int _AP_W = 512; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_ref.h:451:59:   required from ‘ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(const af_range_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 32; int _AP_I2 = 13; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 512; bool _AP_S = false]’
+../src/host.cpp:163:131:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5292:45: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 5292 |       static const uint64_t mask = wordBits ? (~0ULL << (wordBits)) : 0ULL;
+      |                                    ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5300:43: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 5300 |     static const uint64_t mask = wordBits ? (~0ULL << (wordBits)) : 0ULL;
+      |                                  ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_common.h:641,
+                 from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int.h:54,
+                 from ../src/typedefs.h:29,
+                 from ../src/host.cpp:38:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, false>::clearUnusedBits() volatile [with int _AP_W = 66; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:3901:5:   required from ‘typename ap_private<_AP_W, _AP_S, false>::RType<_AP_W2, _AP_S2>::minus ap_private<_AP_W, _AP_S, false>::operator-(const ap_private<_AP_W1, _AP_S1>&) const [with int _AP_W1 = 65; bool _AP_S1 = true; int _AP_W = 65; bool _AP_S = true; typename ap_private<_AP_W, _AP_S, false>::RType<_AP_W2, _AP_S2>::minus = ap_private<66, true, false>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:1354:1:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, const ap_int_base<_AP_W3, _AP_S3>&) [with int _AP_W = 11; bool _AP_S = false; int _AP_W2 = 64; bool _AP_S2 = true; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus = ap_int<65>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:1469:1:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_long, true>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, long int) [with int _AP_W = 11; bool _AP_S = false; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_long, true>::minus = ap_int<65>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:563:19:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:3428:22: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 3427 |               : (excess_bits
+      |                 ~~~~~~~~~~~~
+ 3428 |                      ? ((pVal[_AP_N - 1]) << (excess_bits)) >> (excess_bits)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3429 |                      : pVal[_AP_N - 1]);
+      |                      ~~~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 55; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1426:5:   required from ‘ap_private<_AP_W, _AP_S>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 56; bool _AP_S1 = true; int _AP_W = 55; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:1354:1:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, const ap_int_base<_AP_W3, _AP_S3>&) [with int _AP_W = 1; bool _AP_S = false; int _AP_W2 = 54; bool _AP_S2 = true; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus = ap_int<55>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:755:37:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<1, false>::minus ap_int_base<_AP_W, _AP_S>::operator-() const [with int _AP_W = 54; bool _AP_S = true; typename ap_int_base<_AP_W, _AP_S>::RType<1, false>::minus = ap_int<55>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:570:22:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 2144 |             : (excess_bits ? (((uint64_t)VAL) << (excess_bits)) >> (excess_bits)
+      |               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2145 |                            : (uint64_t)VAL));
+      |                            ~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, false>::clearUnusedBits() volatile [with int _AP_W = 65; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:3313:5:   required from ‘ap_private<_AP_W, _AP_S, false>::ap_private(const ap_private<_AP_W1, _AP_S1, true>&) [with int _AP_W1 = 32; bool _AP_S1 = true; int _AP_W = 65; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:4070:34:   required from ‘bool ap_private<_AP_W, _AP_S, false>::operator==(const ap_private<_AP_W1, _AP_S1>&) const [with int _AP_W2 = 32; bool _AP_S2 = true; int _AP_W = 65; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:6918:1:   required from ‘bool operator==(const ap_private<_AP_W, _AP_S>&, int) [with int _AP_W = 65; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:571:41:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:3428:22: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 3427 |               : (excess_bits
+      |                 ~~~~~~~~~~~~
+ 3428 |                      ? ((pVal[_AP_N - 1]) << (excess_bits)) >> (excess_bits)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3429 |                      : pVal[_AP_N - 1]);
+      |                      ~~~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 17; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1662:5:   required from ‘ap_private<_AP_W, _AP_S, true>::ap_private(const ap_private<_AP_W1, _AP_S1, _AP_OPT>&) [with int _AP_W1 = 16; bool _AP_S1 = false; bool _AP_OPT = true; int _AP_W = 17; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1761:38:   required from ‘ap_private<(_AP_W + (! _AP_S)), true> ap_private<_AP_W, _AP_S, true>::operator~() const [with int _AP_W = 16; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:395:21:   required from ‘void ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::overflow_adjust(bool, bool, bool, bool) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:665:9:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 2144 |             : (excess_bits ? (((uint64_t)VAL) << (excess_bits)) >> (excess_bits)
+      |               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2145 |                            : (uint64_t)VAL));
+      |                            ~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 48; bool _AP_S = false]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1485:1:   required from ‘ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 48; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:243:3:   required from ‘ap_int_base<_AP_W, _AP_S>::ap_int_base(int) [with int _AP_W = 48; bool _AP_S = false]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:754:36:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 48; int _AP_I2 = 17; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 49; int _AP_I = 18; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:431:5:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 48; int _AP_I2 = 17; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 49; int _AP_I = 18; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:1192:3:   required from ‘typename ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::RType<_AP_W2, _AP_I2, _AP_S2>::plus ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator+(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) const [with int _AP_W2 = 48; int _AP_I2 = 17; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::RType<_AP_W2, _AP_I2, _AP_S2>::plus = ap_fixed<49, 18, AP_TRN, AP_WRAP, 0>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:1212:3:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator+=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 48; int _AP_I2 = 17; bool _AP_S2 = true; ap_q_mode _AP_Q2 = AP_TRN; ap_o_mode _AP_O2 = AP_WRAP; int _AP_N2 = 0; int _AP_W = 32; int _AP_I = 13; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:275:47:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+In file included from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_common.h:641,
+                 from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int.h:54,
+                 from ../src/typedefs.h:29,
+                 from ../src/host.cpp:38:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, false>::cpSext(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 66; bool _AP_S1 = true; int _AP_W = 65; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5335:7:   required from ‘void ap_private<_AP_W, _AP_S, false>::cpSextOrTrunc(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 66; bool _AP_S1 = true; int _AP_W = 65; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:4598:7:   required from ‘ap_private<_AP_W, _AP_S, false>& ap_private<_AP_W, _AP_S, false>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 66; bool _AP_S1 = true; int _AP_W = 65; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:1354:1:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, const ap_int_base<_AP_W3, _AP_S3>&) [with int _AP_W = 11; bool _AP_S = false; int _AP_W2 = 64; bool _AP_S2 = true; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus = ap_int<65>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:1469:1:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_long, true>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, long int) [with int _AP_W = 11; bool _AP_S = false; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_long, true>::minus = ap_int<65>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:563:19:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5292:45: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 5292 |       static const uint64_t mask = wordBits ? (~0ULL << (wordBits)) : 0ULL;
+      |                                    ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5300:43: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 5300 |     static const uint64_t mask = wordBits ? (~0ULL << (wordBits)) : 0ULL;
+      |                                  ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_common.h:641,
+                 from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int.h:54,
+                 from ../src/typedefs.h:29,
+                 from ../src/host.cpp:38:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() volatile [with int _AP_W = 56; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:1649:3:   required from ‘ap_private<_AP_W, _AP_S, true>::ap_private(long int) [with int _AP_W = 56; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2082:46:   required from ‘typename ap_private<_AP_W, _AP_S, true>::RType<_AP_W2, _AP_S2>::minus ap_private<_AP_W, _AP_S, true>::operator-(const ap_private<_AP_W1, _AP_S1>&) const [with int _AP_W1 = 55; bool _AP_S1 = true; int _AP_W = 55; bool _AP_S = true; typename ap_private<_AP_W, _AP_S, true>::RType<_AP_W2, _AP_S2>::minus = ap_private<56, true, true>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:1354:1:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, const ap_int_base<_AP_W3, _AP_S3>&) [with int _AP_W = 1; bool _AP_S = false; int _AP_W2 = 54; bool _AP_S2 = true; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus = ap_int<55>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:755:37:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<1, false>::minus ap_int_base<_AP_W, _AP_S>::operator-() const [with int _AP_W = 54; bool _AP_S = true; typename ap_int_base<_AP_W, _AP_S>::RType<1, false>::minus = ap_int<55>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:570:22:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:2144:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 2144 |             : (excess_bits ? (((uint64_t)VAL) << (excess_bits)) >> (excess_bits)
+      |               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2145 |                            : (uint64_t)VAL));
+      |                            ~~~~~~~~~~~~~~~~
+In file included from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_common.h:641,
+                 from /scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int.h:54,
+                 from ../src/typedefs.h:29,
+                 from ../src/host.cpp:38:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h: In instantiation of ‘void ap_private<_AP_W, _AP_S, false>::cpSext(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 11; bool _AP_S1 = false; int _AP_W = 65; bool _AP_S = true]’:
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5335:7:   required from ‘void ap_private<_AP_W, _AP_S, false>::cpSextOrTrunc(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 11; bool _AP_S1 = false; int _AP_W = 65; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:4598:7:   required from ‘ap_private<_AP_W, _AP_S, false>& ap_private<_AP_W, _AP_S, false>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 11; bool _AP_S1 = false; int _AP_W = 65; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:215:13:   required from ‘ap_int_base<_AP_W, _AP_S>::ap_int_base(const ap_int_base<_AP_W2, _AP_S2>&) [with int _AP_W2 = 11; bool _AP_S2 = false; int _AP_W = 65; bool _AP_S = true]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:1354:1:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, const ap_int_base<_AP_W3, _AP_S3>&) [with int _AP_W = 11; bool _AP_S = false; int _AP_W2 = 64; bool _AP_S2 = true; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus = ap_int<65>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_int_base.h:1469:1:   required from ‘typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_long, true>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, long int) [with int _AP_W = 11; bool _AP_S = false; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_long, true>::minus = ap_int<65>]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:563:19:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(double) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed_base.h:672:43:   required from ‘ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(float) [with int _AP_W = 16; int _AP_I = 4; bool _AP_S = true; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/ap_fixed.h:188:3:   required from ‘ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_fixed(float) [with int _AP_W = 16; int _AP_I = 4; ap_q_mode _AP_Q = AP_TRN; ap_o_mode _AP_O = AP_WRAP; int _AP_N = 0]’
+../src/host.cpp:117:24:   required from here
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5292:45: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 5292 |       static const uint64_t mask = wordBits ? (~0ULL << (wordBits)) : 0ULL;
+      |                                    ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/unsafe/Xilinx/Vivado/2020.2/include/etc/ap_private.h:5300:43: warning: enum constant in boolean context [-Wint-in-bool-context]
+ 5300 |     static const uint64_t mask = wordBits ? (~0ULL << (wordBits)) : 0ULL;
+      |                                  ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ERROR: 'parted' command not exist. Please make sure 'parted' command path is in $PATH variable 
+make: *** [Makefile:23: package/sd_card.img] Error 1

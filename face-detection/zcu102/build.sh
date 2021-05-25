@@ -6,12 +6,13 @@ cd -
 
 export PLATFORM_REPO_PATHS=${root_dir}/platform/embedded_platform/zcu102_custom
 export ROOTFS=${root_dir}/platform/embedded_platform/linux
-export kl_name=rendering
 #export MaxJobNum=$(nproc)
 export MaxJobNum=10
 source ${root_dir}/platform/embedded_platform/sdkdir/environment-setup-aarch64-xilinx-linux
 #source /opt/Xilinx/Vitis/2020.2/settings64.sh
 source /scratch/unsafe/Xilinx/Vitis/2020.2/settings64.sh
+
+export kl_name=face_detect
 
 # Make sure everything is up to date
 make all 

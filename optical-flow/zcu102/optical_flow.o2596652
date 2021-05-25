@@ -1,0 +1,408 @@
+/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102
+aarch64-xilinx-linux-g++  -march=armv8-a+crc -mtune=cortex-a72.cortex-a53 --sysroot=/scratch/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/sdkdir/sysroots/aarch64-xilinx-linux -Wall -g -std=c++11 -c ../src/imageLib/RefCntMem.cpp -o ../src/imageLib/RefCntMem.o
+aarch64-xilinx-linux-g++  -march=armv8-a+crc -mtune=cortex-a72.cortex-a53 --sysroot=/scratch/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/sdkdir/sysroots/aarch64-xilinx-linux -Wall -g -std=c++11 -c ../src/imageLib/ImageIO.cpp -o ../src/imageLib/ImageIO.o
+aarch64-xilinx-linux-g++  -march=armv8-a+crc -mtune=cortex-a72.cortex-a53 --sysroot=/scratch/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/sdkdir/sysroots/aarch64-xilinx-linux -Wall -g -std=c++11 -c ../src/imageLib/Image.cpp -o ../src/imageLib/Image.o
+aarch64-xilinx-linux-g++  -march=armv8-a+crc -mtune=cortex-a72.cortex-a53 --sysroot=/scratch/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/sdkdir/sysroots/aarch64-xilinx-linux -Wall -g -std=c++11 -c ../src/imageLib/flowIO.cpp -o ../src/imageLib/flowIO.o
+aarch64-xilinx-linux-g++  -march=armv8-a+crc -mtune=cortex-a72.cortex-a53 --sysroot=/scratch/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/sdkdir/sysroots/aarch64-xilinx-linux -Wall -g -std=c++11 -c ../src/imageLib/Convolve.cpp -o ../src/imageLib/Convolve.o
+aarch64-xilinx-linux-g++  -march=armv8-a+crc -mtune=cortex-a72.cortex-a53 --sysroot=/scratch/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/sdkdir/sysroots/aarch64-xilinx-linux -Wall -g -std=c++11 -c ../src/imageLib/Convert.cpp -o ../src/imageLib/Convert.o
+aarch64-xilinx-linux-g++  -march=armv8-a+crc -mtune=cortex-a72.cortex-a53 --sysroot=/scratch/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/sdkdir/sysroots/aarch64-xilinx-linux -Wall -g -std=c++11 ../src/host.cpp ../src/imageLib/RefCntMem.o ../src/imageLib/ImageIO.o ../src/imageLib/Image.o ../src/imageLib/flowIO.o ../src/imageLib/Convolve.o ../src/imageLib/Convert.o -o app.exe \
+	-I/usr/include/xrt \
+	-I/scratch/unsafe/Xilinx/Vivado/2020.2/include \
+	-lOpenCL \
+	-lpthread \
+	-lrt \
+	-lstdc++
+v++ -c -t hw --config ../src/zcu102.cfg -k optical_flow -I../src -I/scratch/unsafe/Xilinx/Vivado/2020.2/include ../src/optical_flow.cpp -o optical_flow.xo 
+Option Map File Used: '/scratch/unsafe/Xilinx/Vitis/2020.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/optical_flow
+	Log files: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/logs/optical_flow
+Running Dispatch Server on port:42863
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xo.compile_summary, at Mon May 24 02:15:50 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Mon May 24 02:15:50 2021
+Running Rule Check Server on port:38403
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/optical_flow/v++_compile_optical_flow_guidance.html', at Mon May 24 02:15:52 2021
+INFO: [v++ 60-895]   Target platform: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/zcu102_custom.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/hw/zcu102_custom_platform.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: zcu102_custom
+INFO: [v++ 60-242] Creating kernel: 'optical_flow'
+WARNING: /scratch/unsafe/Xilinx/Vitis/2020.2/tps/lnx64/jre9.0.4 does not exist.
+
+===>The following messages were generated while  performing high-level synthesis for kernel: optical_flow Log file: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/optical_flow/optical_flow/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'FRAMES_CP_INNER'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'FRAMES_CP_INNER'
+INFO: [v++ 204-61] Pipelining loop 'GRAD_XY_OUTER_GRAD_XY_INNER'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'GRAD_XY_OUTER_GRAD_XY_INNER'
+INFO: [v++ 204-61] Pipelining loop 'GRAD_Z_OUTER_GRAD_Z_INNER'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'GRAD_Z_OUTER_GRAD_Z_INNER'
+INFO: [v++ 204-61] Pipelining loop 'GRAD_WEIGHT_Y_OUTER_GRAD_WEIGHT_Y_INNER'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'GRAD_WEIGHT_Y_OUTER_GRAD_WEIGHT_Y_INNER'
+INFO: [v++ 204-61] Pipelining loop 'GRAD_WEIGHT_X_OUTER_GRAD_WEIGHT_X_INNER'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'GRAD_WEIGHT_X_OUTER_GRAD_WEIGHT_X_INNER'
+INFO: [v++ 204-61] Pipelining loop 'OUTER_OUTER_OUTER_INNER'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 6, Depth = 10, loop 'OUTER_OUTER_OUTER_INNER'
+INFO: [v++ 204-61] Pipelining loop 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 6, Depth = 14, loop 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER'
+INFO: [v++ 204-61] Pipelining loop 'TENSOR_WEIGHT_X_OUTER_TENSOR_WEIGHT_X_INNER'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 6, Depth = 14, loop 'TENSOR_WEIGHT_X_OUTER_TENSOR_WEIGHT_X_INNER'
+INFO: [v++ 204-61] Pipelining loop 'FLOW_OUTER_FLOW_INNER'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 6, Depth = 86, loop 'FLOW_OUTER_FLOW_INNER'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 273.92 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/optical_flow/system_estimate_optical_flow.xtxt
+INFO: [v++ 60-586] Created optical_flow.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 6m 55s
+INFO: [v++ 60-1653] Closing dispatch client.
+v++ -l -t hw --config ../src/zcu102.cfg ./optical_flow.xo \
+	--vivado.synth.jobs 10 \
+	--vivado.impl.jobs 10 \
+	-o optical_flow.xclbin
+Option Map File Used: '/scratch/unsafe/Xilinx/Vitis/2020.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/link
+	Log files: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/logs/link
+Running Dispatch Server on port:43023
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xclbin.link_summary, at Mon May 24 02:22:50 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Mon May 24 02:22:50 2021
+Running Rule Check Server on port:36991
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/link/v++_link_optical_flow_guidance.html', at Mon May 24 02:22:52 2021
+INFO: [v++ 60-895]   Target platform: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/zcu102_custom.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/hw/zcu102_custom_platform.xsa'
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: zcu102_custom
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [02:23:00] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xo -keep --xpfm /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/zcu102_custom.xpfm --target hw --output_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int --temp_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Mon May 24 02:23:03 2021
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [02:23:12] build_xd_ip_db started: /scratch/unsafe/Xilinx/Vitis/2020.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/zcu102_custom_platform.hpfm -clkid 1 -ip /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/iprepo/xilinx_com_hls_optical_flow_1_0,optical_flow -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [02:23:22] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1677.969 ; gain = 0.000 ; free physical = 30827 ; free virtual = 44945
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [02:23:22] cfgen started: /scratch/unsafe/Xilinx/Vitis/2020.2/bin/cfgen -dmclkid 1 -r /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: optical_flow, num: 1  {optical_flow_1}
+INFO: [CFGEN 83-2226] Inferring mapping for argument optical_flow_1.frames to HP0
+INFO: [CFGEN 83-2226] Inferring mapping for argument optical_flow_1.outputs to HP0
+INFO: [SYSTEM_LINK 82-37] [02:23:25] cfgen finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1677.969 ; gain = 0.000 ; free physical = 30828 ; free virtual = 44946
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [02:23:25] cf2bd started: /scratch/unsafe/Xilinx/Vitis/2020.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/_sysl/.xsd --temp_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link --output_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -dn dr -dp /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [02:23:33] cf2bd finished successfully
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1677.969 ; gain = 0.000 ; free physical = 30820 ; free virtual = 44943
+INFO: [v++ 60-1441] [02:23:33] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 30860 ; free virtual = 44982
+INFO: [v++ 60-1443] [02:23:33] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/sdsl.dat -rtd /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/cf2sw.rtd -nofilter /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/cf2sw_full.rtd -xclbin /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/xclbin_orig.xml -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/run_link
+INFO: [v++ 60-1441] [02:23:38] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 30862 ; free virtual = 44985
+INFO: [v++ 60-1443] [02:23:39] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/run_link
+INFO: [v++ 60-1441] [02:23:41] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 30448 ; free virtual = 44570
+INFO: [v++ 60-1443] [02:23:41] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f zcu102_custom -g --remote_ip_cache /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/.ipcache -s --output_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int --log_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/logs/link --report_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/link --config /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/vplConfig.ini -k /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link --no-info --iprepo /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/xo/ip_repo/xilinx_com_hls_optical_flow_1_0 --messageDb /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/run_link/vpl.pb /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/run_link
+
+****** vpl v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: zcu102_custom
+INFO: [VPL 60-1032] Extracting hardware platform to /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/vivado/vpl/.local/hw_platform
+WARNING: /scratch/unsafe/Xilinx/Vitis/2020.2/tps/lnx64/jre9.0.4 does not exist.
+[02:24:20] Run vpl: Step create_project: Started
+Creating Vivado project.
+[02:24:46] Run vpl: Step create_project: Completed
+[02:24:46] Run vpl: Step create_bd: Started
+[02:25:04] Run vpl: Step create_bd: Completed
+[02:25:04] Run vpl: Step update_bd: Started
+[02:25:22] Run vpl: Step update_bd: Completed
+[02:25:22] Run vpl: Step generate_target: Started
+[02:26:39] Run vpl: Step generate_target: RUNNING...
+[02:26:58] Run vpl: Step generate_target: Completed
+[02:26:58] Run vpl: Step config_hw_runs: Started
+[02:27:34] Run vpl: Step config_hw_runs: Completed
+[02:27:34] Run vpl: Step synth: Started
+[02:28:39] Block-level synthesis in progress, 0 of 30 jobs complete, 10 jobs running.
+[02:29:10] Block-level synthesis in progress, 0 of 30 jobs complete, 10 jobs running.
+[02:29:43] Block-level synthesis in progress, 0 of 30 jobs complete, 10 jobs running.
+[02:30:15] Block-level synthesis in progress, 0 of 30 jobs complete, 10 jobs running.
+[02:30:47] Block-level synthesis in progress, 8 of 30 jobs complete, 2 jobs running.
+[02:31:19] Block-level synthesis in progress, 10 of 30 jobs complete, 8 jobs running.
+[02:31:51] Block-level synthesis in progress, 10 of 30 jobs complete, 10 jobs running.
+[02:32:24] Block-level synthesis in progress, 11 of 30 jobs complete, 9 jobs running.
+[02:32:56] Block-level synthesis in progress, 14 of 30 jobs complete, 7 jobs running.
+[02:33:28] Block-level synthesis in progress, 16 of 30 jobs complete, 8 jobs running.
+[02:34:00] Block-level synthesis in progress, 20 of 30 jobs complete, 6 jobs running.
+[02:34:32] Block-level synthesis in progress, 21 of 30 jobs complete, 7 jobs running.
+[02:35:03] Block-level synthesis in progress, 22 of 30 jobs complete, 6 jobs running.
+[02:35:35] Block-level synthesis in progress, 25 of 30 jobs complete, 5 jobs running.
+[02:36:06] Block-level synthesis in progress, 28 of 30 jobs complete, 2 jobs running.
+[02:36:38] Block-level synthesis in progress, 28 of 30 jobs complete, 2 jobs running.
+[02:37:09] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:37:41] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:38:12] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:38:43] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:39:15] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:39:46] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:40:17] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:40:49] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:41:20] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:41:52] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:42:23] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[02:42:55] Block-level synthesis in progress, 30 of 30 jobs complete, 0 jobs running.
+[02:43:26] Top-level synthesis in progress.
+[02:43:57] Top-level synthesis in progress.
+[02:44:29] Top-level synthesis in progress.
+[02:45:13] Run vpl: Step synth: Completed
+[02:45:13] Run vpl: Step impl: Started
+[02:48:21] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 24m 37s 
+
+[02:48:21] Starting logic optimization..
+[02:48:21] Phase 1 Retarget
+[02:48:21] Phase 2 Constant propagation
+[02:48:53] Phase 3 Sweep
+[02:48:53] Phase 4 BUFG optimization
+[02:48:53] Phase 5 Shift Register Optimization
+[02:48:53] Phase 6 Post Processing Netlist
+[02:50:27] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 02m 05s 
+
+[02:50:27] Starting logic placement..
+[02:50:27] Phase 1 Placer Initialization
+[02:50:27] Phase 1.1 Placer Initialization Netlist Sorting
+[02:50:27] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[02:50:27] Phase 1.3 Build Placer Netlist Model
+[02:50:58] Phase 1.4 Constrain Clocks/Macros
+[02:50:58] Phase 2 Global Placement
+[02:50:58] Phase 2.1 Floorplanning
+[02:50:58] Phase 2.1.1 Partition Driven Placement
+[02:50:58] Phase 2.1.1.1 PBP: Partition Driven Placement
+[02:50:58] Phase 2.1.1.2 PBP: Clock Region Placement
+[02:50:58] Phase 2.1.1.3 PBP: Compute Congestion
+[02:50:58] Phase 2.1.1.4 PBP: UpdateTiming
+[02:51:30] Phase 2.1.1.5 PBP: Add part constraints
+[02:51:30] Phase 2.2 Update Timing before SLR Path Opt
+[02:51:30] Phase 2.3 Global Placement Core
+[02:52:01] Phase 2.3.1 Physical Synthesis In Placer
+[02:52:32] Phase 3 Detail Placement
+[02:52:32] Phase 3.1 Commit Multi Column Macros
+[02:52:32] Phase 3.2 Commit Most Macros & LUTRAMs
+[02:53:04] Phase 3.3 Small Shape DP
+[02:53:04] Phase 3.3.1 Small Shape Clustering
+[02:53:04] Phase 3.3.2 Flow Legalize Slice Clusters
+[02:53:04] Phase 3.3.3 Slice Area Swap
+[02:53:04] Phase 3.4 Re-assign LUT pins
+[02:53:35] Phase 3.5 Pipeline Register Optimization
+[02:53:35] Phase 4 Post Placement Optimization and Clean-Up
+[02:53:35] Phase 4.1 Post Commit Optimization
+[02:53:35] Phase 4.1.1 Post Placement Optimization
+[02:53:35] Phase 4.1.1.1 BUFG Insertion
+[02:53:35] Phase 1 Physical Synthesis Initialization
+[02:54:38] Phase 4.2 Post Placement Cleanup
+[02:54:38] Phase 4.3 Placer Reporting
+[02:54:38] Phase 4.3.1 Print Estimated Congestion
+[02:54:38] Phase 4.4 Final Placement Cleanup
+[02:54:38] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 00h 04m 11s 
+
+[02:54:38] Starting logic routing..
+[02:55:10] Phase 1 Build RT Design
+[02:55:10] Phase 2 Router Initialization
+[02:55:10] Phase 2.1 Fix Topology Constraints
+[02:55:10] Phase 2.2 Pre Route Cleanup
+[02:55:10] Phase 2.3 Global Clock Net Routing
+[02:55:41] Phase 2.4 Update Timing
+[02:56:12] Phase 3 Initial Routing
+[02:56:12] Phase 3.1 Global Routing
+[02:56:12] Phase 4 Rip-up And Reroute
+[02:56:12] Phase 4.1 Global Iteration 0
+[02:59:52] Phase 4.2 Additional Iteration for Hold
+[02:59:52] Phase 5 Delay and Skew Optimization
+[02:59:52] Phase 5.1 Delay CleanUp
+[02:59:52] Phase 5.1.1 Update Timing
+[02:59:52] Phase 5.2 Clock Skew Optimization
+[02:59:52] Phase 6 Post Hold Fix
+[02:59:52] Phase 6.1 Hold Fix Iter
+[02:59:52] Phase 6.1.1 Update Timing
+[03:00:23] Phase 7 Route finalize
+[03:00:23] Phase 8 Verifying routed nets
+[03:00:23] Phase 9 Depositing Routes
+[03:00:23] Phase 10 Post Router Timing
+[03:00:23] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 00h 05m 45s 
+
+[03:00:23] Starting bitstream generation..
+[03:01:59] Creating bitmap...
+[03:02:15] Run vpl: Step impl: Completed
+[03:02:16] Writing bitstream ./system_wrapper.bit...
+[03:02:16] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 01m 52s 
+[03:02:16] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [03:02:21] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:00:28 ; elapsed = 00:38:40 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 29267 ; free virtual = 43791
+INFO: [v++ 60-1443] [03:02:21] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/run_link
+INFO: [v++ 60-1453] Command Line: cf2sw -a /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/address_map.xml -sdsl /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/sdsl.dat -xclbin /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/xclbin_orig.xml -rtd /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow.rtd -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-2311] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, rtdInputFilePath: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow.rtd
+INFO: [v++ 60-2312] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, systemDiagramOutputFilePath: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/systemDiagramModelSlrBaseAddress.json
+INFO: [v++ 60-1618] Launching 
+INFO: [v++ 60-1441] [03:02:27] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 30402 ; free virtual = 44927
+INFO: [v++ 60-1443] [03:02:27] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/system.bit --force --target hw --key-value SYS:dfx_enable:false --add-section :JSON:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow_xml.rtd --add-section BUILD_METADATA:JSON:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow_build.rtd --add-section EMBEDDED_METADATA:RAW:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow.xml --add-section SYSTEM_METADATA:RAW:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_zcu102_zcu102_custom_platform_0_0 --output /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xclbin
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/run_link
+XRT Build Version: 2.8.0 (Vitis)
+       Build Date: 2020-11-04 13:51:01
+          Hash ID: 70b0d7e5db97d08503f97ca713c33ecb01ddca64
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 728 bytes
+Format : JSON
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 26510899 bytes
+Format : RAW
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/system.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+WARNING: Skipping CLOCK_FREQ_TOPOLOGY section for count size is zero.
+WARNING: Section 'CLOCK_FREQ_TOPOLOGY' content is empty.  No data in the given JSON file.
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was empty.  No action taken.
+Format : JSON
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 2117 bytes
+Format : JSON
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 14279 bytes
+Format : RAW
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/optical_flow.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 5647 bytes
+Format : RAW
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/int/systemDiagramModelSlrBaseAddress.json'
+Successfully wrote (26541942 bytes) to the output file: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [03:02:30] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 30378 ; free virtual = 44928
+INFO: [v++ 60-1443] [03:02:30] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xclbin.info --input /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xclbin
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/run_link
+INFO: [v++ 60-1441] [03:02:34] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 30380 ; free virtual = 44930
+INFO: [v++ 60-1443] [03:02:34] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/link/run_link
+INFO: [v++ 60-1441] [03:02:34] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 30380 ; free virtual = 44930
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/link/system_estimate_optical_flow.xtxt
+INFO: [v++ 60-2397] Platform default or user specified output type sd_card detected but is not a supported output for v++ --link. Use the v++ --package option instead to create SD card output.
+INFO: [v++ 60-586] Created optical_flow.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/link/v++_link_optical_flow_guidance.html
+	Timing Report: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/link/imp/impl_1_system_wrapper_timing_summary_routed.rpt
+	Vivado Log: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/logs/link/vivado.log
+	Steps Log File: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/optical_flow.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 39m 55s
+INFO: [v++ 60-1653] Closing dispatch client.
+v++ -p -t hw --config ../src/zcu102.cfg ./optical_flow.xclbin \
+	--package.out_dir package \
+	--package.rootfs /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/linux/rootfs.ext4 \
+	--package.sd_file /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/linux/Image \
+	--package.sd_file optical_flow.xclbin \
+	--package.sd_file xrt.ini \
+	--package.sd_file app.exe \
+	--package.sd_file run_app.sh
+Option Map File Used: '/scratch/unsafe/Xilinx/Vitis/2020.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ package can be found at:
+	Reports: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/package
+	Log files: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/logs/package
+Running Dispatch Server on port:34041
+INFO: [v++ 60-1548] Creating build summary session with primary output ./v++.package_summary, at Mon May 24 03:02:49 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Mon May 24 03:02:49 2021
+Running Rule Check Server on port:43777
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/reports/package/v++_package_a_guidance.html', at Mon May 24 03:02:51 2021
+INFO: [v++ 60-895]   Target platform: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/zcu102_custom.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/hw/zcu102_custom_platform.xsa'
+INFO: [v++ 60-2256] Packaging for hardware
+
+Section: 'SYSTEM_METADATA'(22) was successfully written.
+Format: RAW
+File  : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/package/extractedSystemDiagram.json'
+
+Section: 'BITSTREAM'(0) was successfully written.
+Format: RAW
+File  : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/_x/package/system.bit'
+WARNING: [v++ 82-1147] Kernel image is not specified for linux domain
+INFO: [v++ 82-1025] generating bootimage
+
+
+****** Xilinx Bootgen v2020.2
+  **** Build date : Nov 18 2020-09:50:31
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+[WARNING]: [fsbl_config] a53_x64 | a53_x32 | r5_single | r5_dual is no more supported. Use 'destination_cpu' attribute for bootloader partition
+
+[INFO]   : Bootimage generated successfully
+
+INFO: [v++ 82-1011] creating sd_card directory
+INFO: [v++ 82-3558] mkfsimage command run: /scratch/unsafe/Xilinx/Vitis/2020.2/scripts/vitis/util/mkfsImage.sh -s /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/package/sd_card/ -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/optical-flow/zcu102/package/sd_card.img -e /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/linux/rootfs.ext4
+Usage:  [options] -s <sdcard folder> -o <sdcard image name> -e <ext4 imange file>
+  options:
+          --help, -v                              Print this usage
+NOTE: Generate sdcard with 1GB fat and 1GB ext4 partition
+
+ERROR: [v++ 82-1081] Cannot generate EXT4 sd_card image
+ERROR: [v++ 60-702] Failed to finish packaging
+INFO: [v++ 60-1653] Closing dispatch client.

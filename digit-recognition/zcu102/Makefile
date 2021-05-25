@@ -20,7 +20,7 @@ ${kl_name}.xclbin: ./${kl_name}.xo
 		-o ${kl_name}.xclbin
 
 package/sd_card.img: app.exe ${kl_name}.xclbin xrt.ini run_app.sh
-	v++ -p -t hw --config ../src/zcu102_sim.cfg ./${kl_name}.xclbin \
+	v++ -p -t hw --config ../src/zcu102.cfg ./${kl_name}.xclbin \
 		--package.out_dir package \
 		--package.rootfs ${ROOTFS}/rootfs.ext4 \
 		--package.sd_file ${ROOTFS}/Image \

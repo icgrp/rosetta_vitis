@@ -1,0 +1,3 @@
+stty: 'standard input': Inappropriate ioctl for device
+ERROR: 'parted' command not exist. Please make sure 'parted' command path is in $PATH variable 
+make: *** [Makefile:23: package/sd_card.img] Error 1

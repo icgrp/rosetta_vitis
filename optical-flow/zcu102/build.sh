@@ -6,7 +6,7 @@ cd -
 
 export PLATFORM_REPO_PATHS=${root_dir}/platform/embedded_platform/zcu102_custom
 export ROOTFS=${root_dir}/platform/embedded_platform/linux
-export kl_name=rendering
+export kl_name=optical_flow
 #export MaxJobNum=$(nproc)
 export MaxJobNum=10
 source ${root_dir}/platform/embedded_platform/sdkdir/environment-setup-aarch64-xilinx-linux

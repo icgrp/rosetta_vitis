@@ -1,0 +1,471 @@
+/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102
+aarch64-xilinx-linux-g++  -march=armv8-a+crc -mtune=cortex-a72.cortex-a53 --sysroot=/scratch/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/sdkdir/sysroots/aarch64-xilinx-linux -Wall -g -std=c++11 ../src/host.cpp -o app.exe \
+	-I/usr/include/xrt \
+	-I/scratch/unsafe/Xilinx/Vivado/2020.2/include \
+	-lOpenCL \
+	-lpthread \
+	-lrt \
+	-lstdc++
+v++ -c -t hw --config ../src/zcu102.cfg -k face_detect -I../src -I/scratch/unsafe/Xilinx/Vivado/2020.2/include ../src/face_detect.cpp -o face_detect.xo 
+Option Map File Used: '/scratch/unsafe/Xilinx/Vitis/2020.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/face_detect
+	Log files: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/logs/face_detect
+Running Dispatch Server on port:45689
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xo.compile_summary, at Mon May 24 02:14:58 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Mon May 24 02:14:58 2021
+Running Rule Check Server on port:40683
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/face_detect/v++_compile_face_detect_guidance.html', at Mon May 24 02:15:00 2021
+INFO: [v++ 60-895]   Target platform: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/zcu102_custom.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/hw/zcu102_custom_platform.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: zcu102_custom
+INFO: [v++ 60-242] Creating kernel: 'face_detect'
+WARNING: /scratch/unsafe/Xilinx/Vitis/2020.2/tps/lnx64/jre9.0.4 does not exist.
+
+===>The following messages were generated while  performing high-level synthesis for kernel: face_detect Log file: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/face_detect/face_detect/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Initialize2x'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Initialize2x'
+INFO: [v++ 204-61] Pipelining loop 'Filters'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 18, loop 'Filters'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_2791_1_VITIS_LOOP_2792_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_2791_1_VITIS_LOOP_2792_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_2798_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_2798_3'
+INFO: [v++ 204-61] Pipelining loop 'imageScalerL1_imageScalerL1_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'imageScalerL1_imageScalerL1_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_2850_4'.
+WARNING: [v++ 200-885] Unable to schedule bus request on port 'aximm1' (/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/src/face_detect.cpp:2852) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 74, loop 'VITIS_LOOP_2850_4'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 273.92 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/face_detect/system_estimate_face_detect.xtxt
+INFO: [v++ 60-586] Created face_detect.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 48m 50s
+INFO: [v++ 60-1653] Closing dispatch client.
+v++ -l -t hw --config ../src/zcu102.cfg ./face_detect.xo \
+	--vivado.synth.jobs 10 \
+	--vivado.impl.jobs 10 \
+	-o face_detect.xclbin
+Option Map File Used: '/scratch/unsafe/Xilinx/Vitis/2020.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/link
+	Log files: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/logs/link
+Running Dispatch Server on port:44563
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xclbin.link_summary, at Mon May 24 03:03:50 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Mon May 24 03:03:50 2021
+Running Rule Check Server on port:34329
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/link/v++_link_face_detect_guidance.html', at Mon May 24 03:03:52 2021
+INFO: [v++ 60-895]   Target platform: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/zcu102_custom.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/hw/zcu102_custom_platform.xsa'
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: zcu102_custom
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [03:04:03] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xo -keep --xpfm /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/zcu102_custom.xpfm --target hw --output_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int --temp_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Mon May 24 03:04:06 2021
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [03:04:23] build_xd_ip_db started: /scratch/unsafe/Xilinx/Vitis/2020.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/zcu102_custom_platform.hpfm -clkid 1 -ip /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/iprepo/xilinx_com_hls_face_detect_1_0,face_detect -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [03:04:34] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1610.012 ; gain = 0.000 ; free physical = 33696 ; free virtual = 46188
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [03:04:34] cfgen started: /scratch/unsafe/Xilinx/Vitis/2020.2/bin/cfgen -dmclkid 1 -r /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: face_detect, num: 1  {face_detect_1}
+INFO: [CFGEN 83-2226] Inferring mapping for argument face_detect_1.inData to HP0
+INFO: [CFGEN 83-2226] Inferring mapping for argument face_detect_1.result to HP0
+INFO: [SYSTEM_LINK 82-37] [03:04:37] cfgen finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1610.012 ; gain = 0.000 ; free physical = 33694 ; free virtual = 46187
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [03:04:37] cf2bd started: /scratch/unsafe/Xilinx/Vitis/2020.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/_sysl/.xsd --temp_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link --output_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -dn dr -dp /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [03:04:44] cf2bd finished successfully
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1610.012 ; gain = 0.000 ; free physical = 33687 ; free virtual = 46186
+INFO: [v++ 60-1441] [03:04:44] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:41 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 33733 ; free virtual = 46231
+INFO: [v++ 60-1443] [03:04:44] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/sdsl.dat -rtd /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/cf2sw.rtd -nofilter /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/cf2sw_full.rtd -xclbin /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/xclbin_orig.xml -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/run_link
+INFO: [v++ 60-1441] [03:04:49] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 33754 ; free virtual = 46255
+INFO: [v++ 60-1443] [03:04:49] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/run_link
+INFO: [v++ 60-1441] [03:04:51] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 33258 ; free virtual = 45766
+INFO: [v++ 60-1443] [03:04:51] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f zcu102_custom -g --remote_ip_cache /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/.ipcache -s --output_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int --log_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/logs/link --report_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/link --config /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/vplConfig.ini -k /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link --no-info --iprepo /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/xo/ip_repo/xilinx_com_hls_face_detect_1_0 --messageDb /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/run_link/vpl.pb /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/run_link
+
+****** vpl v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: zcu102_custom
+INFO: [VPL 60-1032] Extracting hardware platform to /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/vivado/vpl/.local/hw_platform
+WARNING: /scratch/unsafe/Xilinx/Vitis/2020.2/tps/lnx64/jre9.0.4 does not exist.
+[03:05:27] Run vpl: Step create_project: Started
+Creating Vivado project.
+[03:05:55] Run vpl: Step create_project: Completed
+[03:05:55] Run vpl: Step create_bd: Started
+[03:06:15] Run vpl: Step create_bd: Completed
+[03:06:15] Run vpl: Step update_bd: Started
+[03:06:30] Run vpl: Step update_bd: Completed
+[03:06:30] Run vpl: Step generate_target: Started
+[03:07:47] Run vpl: Step generate_target: RUNNING...
+[03:08:20] Run vpl: Step generate_target: Completed
+[03:08:20] Run vpl: Step config_hw_runs: Started
+[03:08:57] Run vpl: Step config_hw_runs: Completed
+[03:08:57] Run vpl: Step synth: Started
+[03:10:01] Block-level synthesis in progress, 0 of 30 jobs complete, 10 jobs running.
+[03:10:33] Block-level synthesis in progress, 0 of 30 jobs complete, 10 jobs running.
+[03:11:04] Block-level synthesis in progress, 0 of 30 jobs complete, 10 jobs running.
+[03:11:35] Block-level synthesis in progress, 0 of 30 jobs complete, 10 jobs running.
+[03:12:07] Block-level synthesis in progress, 8 of 30 jobs complete, 2 jobs running.
+[03:12:39] Block-level synthesis in progress, 10 of 30 jobs complete, 8 jobs running.
+[03:13:11] Block-level synthesis in progress, 10 of 30 jobs complete, 10 jobs running.
+[03:13:42] Block-level synthesis in progress, 10 of 30 jobs complete, 10 jobs running.
+[03:14:14] Block-level synthesis in progress, 12 of 30 jobs complete, 8 jobs running.
+[03:14:48] Block-level synthesis in progress, 14 of 30 jobs complete, 9 jobs running.
+[03:15:20] Block-level synthesis in progress, 18 of 30 jobs complete, 6 jobs running.
+[03:15:52] Block-level synthesis in progress, 20 of 30 jobs complete, 7 jobs running.
+[03:16:25] Block-level synthesis in progress, 22 of 30 jobs complete, 5 jobs running.
+[03:16:56] Block-level synthesis in progress, 25 of 30 jobs complete, 2 jobs running.
+[03:17:28] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:17:59] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:18:30] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:19:02] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:19:33] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:20:04] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:20:36] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:21:07] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:21:38] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:22:10] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:22:41] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:23:12] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:23:44] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:24:15] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:24:46] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:25:18] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:25:49] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:26:20] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:26:52] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:27:23] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:27:54] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:28:26] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:28:57] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:29:29] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:30:00] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:30:31] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:31:03] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:31:34] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:32:06] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:32:37] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:33:08] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:33:40] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:34:11] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:34:42] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:35:14] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:35:45] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:36:17] Block-level synthesis in progress, 29 of 30 jobs complete, 1 job running.
+[03:36:49] Block-level synthesis in progress, 30 of 30 jobs complete, 0 jobs running.
+[03:37:20] Top-level synthesis in progress.
+[03:37:52] Top-level synthesis in progress.
+[03:38:23] Top-level synthesis in progress.
+[03:38:54] Top-level synthesis in progress.
+[03:39:36] Run vpl: Step synth: Completed
+[03:39:36] Run vpl: Step impl: Started
+[03:43:17] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 38m 21s 
+
+[03:43:17] Starting logic optimization..
+[03:43:17] Phase 1 Retarget
+[03:43:17] Phase 2 Constant propagation
+[03:43:48] Phase 3 Sweep
+[03:43:48] Phase 4 BUFG optimization
+[03:43:48] Phase 5 Shift Register Optimization
+[03:43:48] Phase 6 Post Processing Netlist
+[03:45:23] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 02m 06s 
+
+[03:45:23] Starting logic placement..
+[03:45:23] Phase 1 Placer Initialization
+[03:45:23] Phase 1.1 Placer Initialization Netlist Sorting
+[03:45:23] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[03:45:23] Phase 1.3 Build Placer Netlist Model
+[03:45:54] Phase 1.4 Constrain Clocks/Macros
+[03:45:54] Phase 2 Global Placement
+[03:45:54] Phase 2.1 Floorplanning
+[03:45:54] Phase 2.1.1 Partition Driven Placement
+[03:45:54] Phase 2.1.1.1 PBP: Partition Driven Placement
+[03:46:57] Phase 2.1.1.2 PBP: Clock Region Placement
+[03:46:57] Phase 2.1.1.3 PBP: Discrete Incremental
+[03:46:57] Phase 2.1.1.4 PBP: Compute Congestion
+[03:46:57] Phase 2.1.1.5 PBP: Macro Placement
+[03:46:57] Phase 2.1.1.6 PBP: UpdateTiming
+[03:46:57] Phase 2.1.1.7 PBP: Add part constraints
+[03:46:57] Phase 2.2 Update Timing before SLR Path Opt
+[03:46:57] Phase 2.3 Global Placement Core
+[03:48:32] Phase 2.3.1 Physical Synthesis In Placer
+[03:49:34] Phase 3 Detail Placement
+[03:49:34] Phase 3.1 Commit Multi Column Macros
+[03:49:34] Phase 3.2 Commit Most Macros & LUTRAMs
+[03:50:06] Phase 3.3 Small Shape DP
+[03:50:06] Phase 3.3.1 Small Shape Clustering
+[03:50:06] Phase 3.3.2 Flow Legalize Slice Clusters
+[03:50:06] Phase 3.3.3 Slice Area Swap
+[03:50:37] Phase 3.4 Re-assign LUT pins
+[03:50:37] Phase 3.5 Pipeline Register Optimization
+[03:51:08] Phase 4 Post Placement Optimization and Clean-Up
+[03:51:08] Phase 4.1 Post Commit Optimization
+[03:51:08] Phase 4.1.1 Post Placement Optimization
+[03:51:40] Phase 4.1.1.1 BUFG Insertion
+[03:51:40] Phase 1 Physical Synthesis Initialization
+[03:52:11] Phase 4.2 Post Placement Cleanup
+[03:52:11] Phase 4.3 Placer Reporting
+[03:52:11] Phase 4.3.1 Print Estimated Congestion
+[03:52:11] Phase 4.4 Final Placement Cleanup
+[03:52:43] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 00h 07m 19s 
+
+[03:52:43] Starting logic routing..
+[03:53:14] Phase 1 Build RT Design
+[03:53:14] Phase 2 Router Initialization
+[03:53:14] Phase 2.1 Fix Topology Constraints
+[03:53:14] Phase 2.2 Pre Route Cleanup
+[03:53:14] Phase 2.3 Global Clock Net Routing
+[03:53:46] Phase 2.4 Update Timing
+[03:54:17] Phase 3 Initial Routing
+[03:54:17] Phase 3.1 Global Routing
+[03:54:48] Phase 4 Rip-up And Reroute
+[03:54:48] Phase 4.1 Global Iteration 0
+[04:01:37] Phase 4.2 Global Iteration 1
+[04:01:37] Phase 5 Delay and Skew Optimization
+[04:01:37] Phase 5.1 Delay CleanUp
+[04:01:37] Phase 5.1.1 Update Timing
+[04:02:08] Phase 5.2 Clock Skew Optimization
+[04:02:08] Phase 6 Post Hold Fix
+[04:02:08] Phase 6.1 Hold Fix Iter
+[04:02:08] Phase 6.1.1 Update Timing
+[04:02:40] Phase 7 Route finalize
+[04:02:40] Phase 8 Verifying routed nets
+[04:02:40] Phase 9 Depositing Routes
+[04:02:40] Phase 10 Post Router Timing
+[04:02:40] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 00h 09m 56s 
+
+[04:02:40] Starting bitstream generation..
+[04:04:47] Creating bitmap...
+[04:05:19] Writing bitstream ./system_wrapper.bit...
+[04:05:24] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 02m 44s 
+[04:05:24] Run vpl: Step impl: Completed
+[04:05:25] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [04:05:27] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:00:40 ; elapsed = 01:00:35 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 31613 ; free virtual = 45068
+INFO: [v++ 60-1443] [04:05:27] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/run_link
+INFO: [v++ 60-1453] Command Line: cf2sw -a /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/address_map.xml -sdsl /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/sdsl.dat -xclbin /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/xclbin_orig.xml -rtd /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect.rtd -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-2311] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, rtdInputFilePath: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect.rtd
+INFO: [v++ 60-2312] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, systemDiagramOutputFilePath: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/systemDiagramModelSlrBaseAddress.json
+INFO: [v++ 60-1618] Launching 
+INFO: [v++ 60-1441] [04:05:31] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 31612 ; free virtual = 45068
+INFO: [v++ 60-1443] [04:05:31] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/system.bit --force --target hw --key-value SYS:dfx_enable:false --add-section :JSON:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect_xml.rtd --add-section BUILD_METADATA:JSON:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect_build.rtd --add-section EMBEDDED_METADATA:RAW:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect.xml --add-section SYSTEM_METADATA:RAW:/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_zcu102_zcu102_custom_platform_0_0 --output /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xclbin
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/run_link
+XRT Build Version: 2.8.0 (Vitis)
+       Build Date: 2020-11-04 13:51:01
+          Hash ID: 70b0d7e5db97d08503f97ca713c33ecb01ddca64
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 728 bytes
+Format : JSON
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 26510899 bytes
+Format : RAW
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/system.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+WARNING: Skipping CLOCK_FREQ_TOPOLOGY section for count size is zero.
+WARNING: Section 'CLOCK_FREQ_TOPOLOGY' content is empty.  No data in the given JSON file.
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was empty.  No action taken.
+Format : JSON
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 2112 bytes
+Format : JSON
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 3836 bytes
+Format : RAW
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/face_detect.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 5643 bytes
+Format : RAW
+File   : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/int/systemDiagramModelSlrBaseAddress.json'
+Successfully wrote (26531483 bytes) to the output file: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [04:05:35] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 31675 ; free virtual = 45158
+INFO: [v++ 60-1443] [04:05:35] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xclbin.info --input /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xclbin
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/run_link
+INFO: [v++ 60-1441] [04:05:38] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 32720 ; free virtual = 46202
+INFO: [v++ 60-1443] [04:05:38] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/link/run_link
+INFO: [v++ 60-1441] [04:05:38] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1570.980 ; gain = 0.000 ; free physical = 32720 ; free virtual = 46202
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/link/system_estimate_face_detect.xtxt
+INFO: [v++ 60-2397] Platform default or user specified output type sd_card detected but is not a supported output for v++ --link. Use the v++ --package option instead to create SD card output.
+INFO: [v++ 60-586] Created face_detect.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/link/v++_link_face_detect_guidance.html
+	Timing Report: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/link/imp/impl_1_system_wrapper_timing_summary_routed.rpt
+	Vivado Log: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/logs/link/vivado.log
+	Steps Log File: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/face_detect.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 1h 1m 58s
+INFO: [v++ 60-1653] Closing dispatch client.
+v++ -p -t hw --config ../src/zcu102.cfg ./face_detect.xclbin \
+	--package.out_dir package \
+	--package.rootfs /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/linux/rootfs.ext4 \
+	--package.sd_file /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/linux/Image \
+	--package.sd_file face_detect.xclbin \
+	--package.sd_file xrt.ini \
+	--package.sd_file app.exe \
+	--package.sd_file run_app.sh
+Option Map File Used: '/scratch/unsafe/Xilinx/Vitis/2020.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ package can be found at:
+	Reports: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/package
+	Log files: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/logs/package
+Running Dispatch Server on port:34695
+INFO: [v++ 60-1548] Creating build summary session with primary output ./v++.package_summary, at Mon May 24 04:05:52 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Mon May 24 04:05:52 2021
+Running Rule Check Server on port:38885
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/reports/package/v++_package_a_guidance.html', at Mon May 24 04:05:54 2021
+INFO: [v++ 60-895]   Target platform: /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/zcu102_custom.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/zcu102_custom/hw/zcu102_custom_platform.xsa'
+INFO: [v++ 60-2256] Packaging for hardware
+
+Section: 'SYSTEM_METADATA'(22) was successfully written.
+Format: RAW
+File  : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/package/extractedSystemDiagram.json'
+
+Section: 'BITSTREAM'(0) was successfully written.
+Format: RAW
+File  : '/mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/_x/package/system.bit'
+WARNING: [v++ 82-1147] Kernel image is not specified for linux domain
+INFO: [v++ 82-1025] generating bootimage
+
+
+****** Xilinx Bootgen v2020.2
+  **** Build date : Nov 18 2020-09:50:31
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+[WARNING]: [fsbl_config] a53_x64 | a53_x32 | r5_single | r5_dual is no more supported. Use 'destination_cpu' attribute for bootloader partition
+
+[INFO]   : Bootimage generated successfully
+
+INFO: [v++ 82-1011] creating sd_card directory
+INFO: [v++ 82-3558] mkfsimage command run: /scratch/unsafe/Xilinx/Vitis/2020.2/scripts/vitis/util/mkfsImage.sh -s /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/package/sd_card/ -o /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/face-detection/zcu102/package/sd_card.img -e /mnt/icgridio2/unsafe/ylxiao/F210523/rosetta_vitis/platform/embedded_platform/linux/rootfs.ext4
+Usage:  [options] -s <sdcard folder> -o <sdcard image name> -e <ext4 imange file>
+  options:
+          --help, -v                              Print this usage
+NOTE: Generate sdcard with 1GB fat and 1GB ext4 partition
+
+ERROR: [v++ 82-1081] Cannot generate EXT4 sd_card image
+ERROR: [v++ 60-702] Failed to finish packaging
+INFO: [v++ 60-1653] Closing dispatch client.
