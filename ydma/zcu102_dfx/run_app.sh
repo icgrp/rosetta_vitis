@@ -13,7 +13,7 @@ cp platform_desc.txt /etc/xocl.txt
 export XILINX_XRT=/usr
 export XILINX_VITIS=/mnt
 
-./app.exe ydma.xclbin
+./app.exe ydma.xclbin 
 
 echo "INFO: press Ctrl+a x to exit qemu"
 

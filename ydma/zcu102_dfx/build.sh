@@ -7,8 +7,8 @@ cd -
 export PLATFORM_REPO_PATHS=/home/ylxiao/workspace/Vitis_Embedded_Platform_Source/Xilinx_Official_Platforms/xilinx_zcu102_base_dfx/platform_repo/xilinx_zcu102_base_dfx_202020_1/export/xilinx_zcu102_base_dfx_202020_1
 export ROOTFS=/home/ylxiao/workspace/Vitis_Embedded_Platform_Source/Xilinx_Official_Platforms/xilinx_zcu102_base_dfx/sw/build/images/linux
 export kl_name=ydma
-export MaxJobNum=$(nproc)
-#export MaxJobNum=10
+#export MaxJobNum=$(nproc)
+export MaxJobNum=4
 
 source /opt/Xilinx/Vitis/2020.2/settings64.sh
 source /opt/xilinx/xrt/setup.sh
@@ -18,6 +18,7 @@ source /home/ylxiao/workspace/Vitis_Embedded_Platform_Source/Xilinx_Official_Pla
 
 # Make sure everything is up to date
 make all 
+# make ${kl_name}.xo
 
 
 

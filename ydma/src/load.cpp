@@ -39,7 +39,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "input_data.h"
 
 
-#define CONFIG_SIZE 12
+#define CONFIG_SIZE 2
 #define INPUT_SIZE 3 * NUM_3D_TRI
 #define OUTPUT_SIZE NUM_FB
 
@@ -54,6 +54,7 @@ void check_results(bit32* output);
 // ------------------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
+  bool match = true;
     // ------------------------------------------------------------------------------------
     // Step 1: Initialize the OpenCL environment
     // ------------------------------------------------------------------------------------
@@ -97,10 +98,10 @@ int main(int argc, char **argv)
     //{
 
       in1[0].range(63, 32) = 0x00000000;
-      in1[0].range(31,  0) = 0x0000000a;
+      in1[0].range(31,  0) = 0x00000000;
 
       in1[1].range(63, 32) = 0x00000000;
-      in1[1].range(31,  0) = 0x00002568;
+      in1[1].range(31,  0) = 0x00000000;
 
       //rasterization2_m.Output_1->zculling_top.Input_1
       in1[2].range(63, 32) = 0x00001800;
@@ -160,12 +161,13 @@ int main(int argc, char **argv)
 	krnl_ydma.setArg(2, out1_buf);
 	krnl_ydma.setArg(3, out2_buf);
 	krnl_ydma.setArg(4, CONFIG_SIZE);
-	krnl_ydma.setArg(5, INPUT_SIZE);
+	krnl_ydma.setArg(5, 0);
 	//krnl_ydma.setArg(6, INPUT_SIZE);
-	krnl_ydma.setArg(6, OUTPUT_SIZE);
+	krnl_ydma.setArg(6, 0);
+
 
 	// Schedule transfer of inputs to device memory, execution of kernel, and transfer of outputs back to host memory
-	q.enqueueMigrateMemObjects({in1_buf, in2_buf}, 0 /* 0 means from host*/);
+	q.enqueueMigrateMemObjects({in1_buf, in2_buf}, 0); //0 means from host
 	q.enqueueTask(krnl_ydma);
 	q.enqueueMigrateMemObjects({out1_buf, out2_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
 
@@ -177,15 +179,16 @@ int main(int argc, char **argv)
     // ------------------------------------------------------------------------------------
     // Step 4: Check Results and Release Allocated Resources
     // ------------------------------------------------------------------------------------
-    bool match = true;
-    check_results(out2);
-    // for(int i=0; i<CONFIG_SIZE; i++){
+
+    //check_results(out2);
+    //for(int i=0; i<CONFIG_SIZE; i++){
     for(int i=0; i<CONFIG_SIZE; i++){
         printf("%d: %08x_%08x\n", i, (unsigned int)out1[i].range(63, 32), (unsigned int) out1[i].range(31, 0));
     	//std::cout << "out1[" << i << "]=" << out1[i] << std::endl;
     }
     
     delete[] fileBuf;
+
 
     std::cout << "TEST " << (match ? "PASSED" : "FAILED") << std::endl;
     return (match ? EXIT_SUCCESS : EXIT_FAILURE);
