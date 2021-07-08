@@ -5,10 +5,7 @@ Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
 1. Redistributions of source code must retain the above copyright notice,
 this list of conditions and the following disclaimer.
-2. Redistributions in binary form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation
-and/or other materials provided with the distribution.
-3. Neither the name of the copyright holder nor the names of its contributors
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.  3. Neither the name of the copyright holder nor the names of its contributors
 may be used to endorse or promote products derived from this software
 without specific prior written permission.
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
@@ -148,6 +145,14 @@ int main(int argc, char **argv)
       in2[3*i+2](7,0)   = triangle_3ds[i].z2;
       in2[3*i+2](31,8)  = 0;
     }
+/*
+    for ( int i = 0; i < NUM_3D_TRI; i++)
+    {
+      in2[3*i]   = 3*i;
+      in2[3*i+1] = 3*i+1;
+      in2[3*i+2] = 3*i+2;
+    }
+*/
 
     // ------------------------------------------------------------------------------------
     // Step 3: Run the kernel
@@ -241,7 +246,6 @@ char *read_binary_file(const std::string &xclbin_file_name, unsigned &nb)
     return buf;
 }
 
-
 void check_results(bit32* output)
 {
   #ifndef SW
@@ -282,3 +286,16 @@ void check_results(bit32* output)
   }
 
 }
+/*
+void check_results(bit32* output)
+{
+  #ifndef SW
+
+    // read result from the 32-bit output buffer
+    for (int i = 0; i<NUM_FB; i++)
+    {
+      printf("i=%d, %d\n", i, (int) output[i]); 
+    }
+  #endif
+}
+*/
