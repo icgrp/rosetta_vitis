@@ -17,7 +17,7 @@ The tools you need to install includes:
 2. [xrt 2020.2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/alveo/u50.html)
 3. [u50 deployment](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/alveo/u50.html)
 
-## Compile and Run Benchmarks
+## Compile and Run Benchmarks with Alveo U50
 Set up the tools environments.
 
 ```c
@@ -93,6 +93,19 @@ The compile time comes from quark with 4 jobs.
 
 3: 1000 test images.
 
+
+## Compile and Run Benchmarks with ZCU102
+
+1. 3d-rendering
+
+```c
+cd root_dir
+./setup
+cd 3d-rendering/zcu102
+open ./build.sh
+change source /opt/Xilinx/Vitis/2020.2/settings64.sh to the right path
+./build
+```
 
 ## Compile Time and Performance for ZCU102
 The compile time comes from quark with 4 jobs.
