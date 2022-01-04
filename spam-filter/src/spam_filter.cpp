@@ -150,11 +150,9 @@ void compute(FeatureType theta_local[NUM_FEATURES],
 
 extern "C" {
 	void spam_filter(
-			VectorDataType    *data,
+	    VectorDataType    *data,
             VectorLabelType   *label,
-            VectorFeatureType *theta,
-            bool readLabels,
-            bool writeOutput
+            VectorFeatureType *theta
 			)
 	{
 #pragma HLS INTERFACE m_axi port=data bundle=aximm1
@@ -162,6 +160,7 @@ extern "C" {
 #pragma HLS INTERFACE m_axi port=theta bundle=aximm1
 		  // intermediate variables
 
+  
 		  // local version of the parameters
 		  static FeatureType theta_local[NUM_FEATURES];
 		  // local buffer of labels
@@ -170,7 +169,9 @@ extern "C" {
 		  // array for storing one training instance
 		  static DataType training_instance[NUM_FEATURES];
 
-		  if (readLabels)
+  for(int epoch = 0; epoch < NUM_EPOCHS; epoch++){
+
+		  if (epoch == 0)
 		  {
 		    // copy in labels
 		    LABEL_CP: for (int i = 0; i < NUM_TRAINING / L_VECTOR_SIZE; i ++ )
@@ -197,7 +198,8 @@ extern "C" {
 		    compute(theta_local, training_label, training_instance);
 		  }
 
-		  if (writeOutput)
+		  if (epoch == 4)
 		    streamOut(theta_local, theta);
-	}
+    }
+  }
 }

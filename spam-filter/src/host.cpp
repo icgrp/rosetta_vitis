@@ -167,20 +167,15 @@ int main(int argc, char **argv)
     // Step 3: Run the kernel
     // ------------------------------------------------------------------------------------
     // Set kernel arguments
-    for (int epoch = 0; epoch < NUM_EPOCHS; epoch ++ ){
 		krnl_spam_filter.setArg(0, in1_buf);
 		krnl_spam_filter.setArg(1, in2_buf);
 		krnl_spam_filter.setArg(2, out_buf);
-		krnl_spam_filter.setArg(3, (epoch == 0));
-		krnl_spam_filter.setArg(4, (epoch == 4));
-		printf("epoch %d...\n", epoch);
 
 		// Schedule transfer of inputs to device memory, execution of kernel, and transfer of outputs back to host memory
 		q.enqueueMigrateMemObjects({in1_buf, in2_buf}, 0 /* 0 means from host*/);
 		q.enqueueTask(krnl_spam_filter);
 		q.enqueueMigrateMemObjects({out_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
 
-    }
     // Wait for all scheduled operations to finish
     q.finish();
     // reorganize the parameter vector
@@ -373,12 +368,21 @@ void check_results(FeatureType* param_vector, DataType* data_points, LabelType* 
     testing_fpr *= 100.0;
     testing_error *= 100.0;
 
-    std::cout << "Training TPR: " << training_tpr << " %" << std::endl;
-    std::cout << "Training FPR: " << training_fpr << " %" <<  std::endl;
-    std::cout << "Training Error: " << training_error << " %" <<  std::endl;
-    std::cout << "Testing TPR: " << testing_tpr << " %" <<  std::endl;
-    std::cout << "Testing FPR: " << testing_fpr << " %" <<  std::endl;
-    std::cout << "Testing Error: " << testing_error << " %" <<  std::endl;
+    printf("We should get |   97.83   |    0.18   |     0.91    |  93.48   |   2.53   |    4.00    |\n");
+    printf("+-----------+-----------+-------------+----------+----------+------------+\n");
+    printf("| Train TPR | Train FPR | Train Error | Test TPR | Test FPR | Test Error |\n");
+    printf("+-----------+-----------+-------------+----------+----------+------------+\n");
+    printf("|   %5.2f   |   %5.2f   |    %5.2f    |  %5.2f   |  %5.2f   |   %5.2f    |\n", training_tpr, 
+         training_fpr, training_error, testing_tpr, testing_fpr, testing_error);
+    printf("+-----------+-----------+-------------+----------+----------+------------+\n");
+
+
+    //std::cout << "Training TPR: " << training_tpr << " %" << std::endl;
+    //std::cout << "Training FPR: " << training_fpr << " %" <<  std::endl;
+    //std::cout << "Training Error: " << training_error << " %" <<  std::endl;
+    //std::cout << "Testing TPR: " << testing_tpr << " %" <<  std::endl;
+    //std::cout << "Testing FPR: " << testing_fpr << " %" <<  std::endl;
+    //std::cout << "Testing Error: " << testing_error << " %" <<  std::endl;
   }
 
 }
