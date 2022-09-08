@@ -19,7 +19,7 @@ $(PRJ_NAME).xclbin: ./$(PRJ_NAME).xo
 	v++ -l -t ${TARGET} --config $(SRC_DIR)/u50.cfg ./$(PRJ_NAME).xo -o $(PRJ_NAME).xclbin
 
 emconfig.json:
-	emconfigutil --platform xilinx_u50_gen3x16_xdma_201920_3 --nd 1
+	emconfigutil --platform xilinx_u50_gen3x16_xdma_5_202210_1 --nd 1
 
 clean:
 	rm -rf $(PRJ_NAME)* app.exe *json *csv *log *summary _x xilinx* .run .Xil .ipcache *.jou
