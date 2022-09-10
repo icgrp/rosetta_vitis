@@ -4,13 +4,13 @@ root_dir=$(pwd)
 cd -
 
 
-export PLATFORM_REPO_PATHS=/scratch/unsafe/Xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1
+export PLATFORM_REPO_PATHS=/scratch/unsafe/Xilinx/platforms/xilinx_zcu102_base_dfx_202210_1
 export ROOTFS=/scratch/unsafe/Xilinx/xilinx-zynqmp-common-v2022.1
 export kl_name=rendering
 export MaxJobNum=$(nproc)
 #export MaxJobNum=10
 
-source /opt/Xilinx/Vitis/2020.2/settings64.sh
+source /scratch/unsafe/Xilinx/Vitis/2022.1/settings64.sh
 source /opt/xilinx/xrt/setup.sh
 unset LD_LIBRARY_PATH
 
