@@ -1,5 +1,7 @@
 PRJ_NAME=rendering
 SRC_DIR=../src
+MaxJobNum=8
+
 
 all: app.exe emconfig.json $(PRJ_NAME).xclbin
 
@@ -16,7 +18,7 @@ $(PRJ_NAME).xo: $(SRC_DIR)/$(PRJ_NAME).cpp
 		$(SRC_DIR)/$(PRJ_NAME).cpp -o $(PRJ_NAME).xo 
 
 $(PRJ_NAME).xclbin: ./$(PRJ_NAME).xo
-	v++ -l -t ${TARGET} --config $(SRC_DIR)/u50.cfg ./$(PRJ_NAME).xo -o $(PRJ_NAME).xclbin
+	v++ -l -t ${TARGET} --config $(SRC_DIR)/u50.cfg --vivado.synth.jobs $(MaxJobNum) --vivado.impl.jobs $(MaxJobNum)  ./$(PRJ_NAME).xo -o $(PRJ_NAME).xclbin
 
 emconfig.json:
 	emconfigutil --platform xilinx_u50_gen3x16_xdma_5_202210_1 --nd 1
