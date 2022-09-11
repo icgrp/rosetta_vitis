@@ -4,7 +4,7 @@ all: package/sd_card.img
 app.exe: ../src/host.cpp
 	${CXX} -Wall -g -std=c++11 ../src/host.cpp -o app.exe \
 		-I/usr/include/xrt \
-		-I${XILINX_VIVADO}/include \
+		-I${XILINX_HLS}/include \
 		-lOpenCL \
 		-lpthread \
 		-lrt \
@@ -13,7 +13,7 @@ app.exe: ../src/host.cpp
 load.exe: ../src/load.cpp
 	${CXX} -Wall -g -std=c++11 ../src/load.cpp -o load.exe \
 		-I/usr/include/xrt \
-		-I${XILINX_VIVADO}/include \
+		-I${XILINX_HLS}/include \
 		-lOpenCL \
 		-lpthread \
 		-lrt \
@@ -23,7 +23,7 @@ load.exe: ../src/load.cpp
 multi_load.exe: ../src/multi_load.cpp
 	${CXX} -Wall -g -std=c++11 $< -o multi_load.exe \
 		-I/usr/include/xrt \
-		-I${XILINX_VIVADO}/include \
+		-I${XILINX_HLS}/include \
 		-lOpenCL \
 		-lpthread \
 		-lrt \
@@ -31,7 +31,7 @@ multi_load.exe: ../src/multi_load.cpp
 
 
 ${kl_name}.xo: ../src/${kl_name}.cpp ../src/zcu102_dfx.cfg
-	v++ -c -t hw --config ../src/zcu102_dfx.cfg -k ${kl_name} -I../src -I${XILINX_VIVADO}/include  ../src/${kl_name}.cpp -o ${kl_name}.xo 
+	v++ -c -t hw --config ../src/zcu102_dfx.cfg -k ${kl_name} -I../src -I${XILINX_HLS}/include  ../src/${kl_name}.cpp -o ${kl_name}.xo 
 
 ${kl_name}.xclbin: ./${kl_name}.xo
 	v++ -l -t hw --config ../src/zcu102_dfx.cfg ./${kl_name}.xo \

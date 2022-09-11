@@ -36,15 +36,15 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "input_data.h"
 
 
-#define CONFIG_SIZE 12
-#define INPUT_SIZE 3 * NUM_3D_TRI
-#define OUTPUT_SIZE NUM_FB
+#define CONFIG_SIZE 4
+#define INPUT_SIZE (32768)
+#define OUTPUT_SIZE (32768)
 
 
 // Forward declaration of utility functions included at the end of this file
 std::vector<cl::Device> get_xilinx_devices();
 char *read_binary_file(const std::string &xclbin_file_name, unsigned &nb);
-void check_results(bit32* output);
+void check_results(bit512* output);
 
 // ------------------------------------------------------------------------------------
 // Main program
@@ -72,9 +72,9 @@ int main(int argc, char **argv)
     // ------------------------------------------------------------------------------------
     // Create the buffers and allocate memory
     cl::Buffer in1_buf(context, CL_MEM_READ_ONLY, sizeof(bit64) * CONFIG_SIZE, NULL, &err);
-    cl::Buffer in2_buf(context, CL_MEM_READ_ONLY, sizeof(bit32) * 3 * NUM_3D_TRI, NULL, &err);
+    cl::Buffer in2_buf(context, CL_MEM_READ_ONLY, sizeof(bit512) * INPUT_SIZE, NULL, &err);
     cl::Buffer out1_buf(context, CL_MEM_WRITE_ONLY, sizeof(bit64) * CONFIG_SIZE, NULL, &err);
-    cl::Buffer out2_buf(context, CL_MEM_WRITE_ONLY, sizeof(bit32) * NUM_FB, NULL, &err);
+    cl::Buffer out2_buf(context, CL_MEM_WRITE_ONLY, sizeof(bit512) * OUTPUT_SIZE, NULL, &err);
 
     // Map buffers to kernel arguments, thereby assigning them to specific device memory banks
     krnl_ydma.setArg(0, in1_buf);
@@ -84,75 +84,38 @@ int main(int argc, char **argv)
 
     // Map host-side buffer memory to user-space pointers
     bit64 *in1 = (bit64 *)q.enqueueMapBuffer(in1_buf, CL_TRUE, CL_MAP_WRITE, 0, sizeof(bit64) * CONFIG_SIZE);
-    bit32 *in2 = (bit32 *)q.enqueueMapBuffer(in2_buf, CL_TRUE, CL_MAP_WRITE, 0, sizeof(bit32) * 3 * NUM_3D_TRI);
+    bit512 *in2 = (bit512 *)q.enqueueMapBuffer(in2_buf, CL_TRUE, CL_MAP_WRITE, 0, sizeof(bit512) * INPUT_SIZE);
     bit64 *out1 = (bit64 *)q.enqueueMapBuffer(out1_buf, CL_TRUE, CL_MAP_WRITE | CL_MAP_READ, 0, sizeof(bit64) * CONFIG_SIZE);
-    bit32 *out2 = (bit32 *)q.enqueueMapBuffer(out2_buf, CL_TRUE, CL_MAP_WRITE | CL_MAP_READ, 0, sizeof(bit32) * NUM_FB);
+    bit512 *out2 = (bit512 *)q.enqueueMapBuffer(out2_buf, CL_TRUE, CL_MAP_WRITE | CL_MAP_READ, 0, sizeof(bit512) * OUTPUT_SIZE);
 
     // Initialize the vectors used in the test
     // pack input data for better performance
     //for ( int i = 0; i < CONFIG_SIZE; i++)
     //{
 
-      in1[0].range(63, 32) = 0x00000000;
-      in1[0].range(31,  0) = 0x0000000a;
+    in1[0].range(63, 32) = 0x00000000;
+    in1[0].range(31,  0) = 0x00000002;
 
-      in1[1].range(63, 32) = 0x00000000;
-      in1[1].range(31,  0) = 0x00002568;
+    in1[1].range(63, 32) = 0x00000000;
+    in1[1].range(31,  0) = OUTPUT_SIZE;
 
-      //rasterization2_m.Output_1->zculling_top.Input_1
-      in1[2].range(63, 32) = 0x00001800;
-      in1[2].range(31,  0) = 0x92100fe0;
-      in1[3].range(63, 32) = 0x00002080;
-      in1[3].range(31,  0) = 0x21c80000;
+    in1[2].range(63, 32) = 0xffffffff;
+    in1[2].range(31,  0) = 0xffffffff;
 
-      //zculling_top.Output_1->coloringFB_bot_m.Input_1
-      in1[4].range(63, 32) = 0x00002000;
-      in1[4].range(31,  0) = 0x92900fe0;
-      in1[5].range(63, 32) = 0x00002880;
-      in1[5].range(31,  0) = 0x22480000;
+    in1[3].range(63, 32) = 0xffffffff;
+    in1[3].range(31,  0) = 0xffffffff;
 
 
-      //data_redir_m.Output_1->rasterization2_m.Input_1
-      in1[6].range(63, 32) = 0x00001000;
-      in1[6].range(31,  0) = 0x91900fe0;
-      in1[7].range(63, 32) = 0x00001880;
-      in1[7].range(31,  0) = 0x21480000;
 
+    // configure packets
 
-      //coloringFB_bot_m.Output_1->DMA.Input_1
-      in1[8].range(63, 32) = 0x00002800;
-      in1[8].range(31,  0) = 0x90900fe0;
-      in1[9].range(63, 32) = 0x00000880;
-      in1[9].range(31,  0) = 0x22c80000;
-
-
-      //DMA.Output_1->data_redir_m.Input_1
-      in1[10].range(63, 32) = 0x00000800;
-      in1[10].range(31,  0) = 0x91100fe0;
-      in1[11].range(63, 32) = 0x00001080;
-      in1[11].range(31,  0) = 0x20c80000;
-
-    for ( int i = 0; i < NUM_3D_TRI; i++)
-    {
-      in2[3*i](7,0)     = triangle_3ds[i].x0;
-      in2[3*i](15,8)    = triangle_3ds[i].y0;
-      in2[3*i](23,16)   = triangle_3ds[i].z0;
-      in2[3*i](31,24)   = triangle_3ds[i].x1;
-      in2[3*i+1](7,0)   = triangle_3ds[i].y1;
-      in2[3*i+1](15,8)  = triangle_3ds[i].z1;
-      in2[3*i+1](23,16) = triangle_3ds[i].x2;
-      in2[3*i+1](31,24) = triangle_3ds[i].y2;
-      in2[3*i+2](7,0)   = triangle_3ds[i].z2;
-      in2[3*i+2](31,8)  = 0;
+  for ( int i = 0; i < INPUT_SIZE; i++)
+  {
+    for( int j=0; j<16; j++){
+      in2[i](32*j+31, 32*j)  = i;
     }
-/*
-    for ( int i = 0; i < NUM_3D_TRI; i++)
-    {
-      in2[3*i]   = 3*i;
-      in2[3*i+1] = 3*i+1;
-      in2[3*i+2] = 3*i+2;
-    }
-*/
+  }
+
 
     // ------------------------------------------------------------------------------------
     // Step 3: Run the kernel
@@ -165,7 +128,8 @@ int main(int argc, char **argv)
 	krnl_ydma.setArg(2, out1_buf);
 	krnl_ydma.setArg(3, out2_buf);
 	krnl_ydma.setArg(4, CONFIG_SIZE);
-	krnl_ydma.setArg(5, INPUT_SIZE);
+	//krnl_ydma.setArg(5, INPUT_SIZE);
+	krnl_ydma.setArg(5, OUTPUT_SIZE);
 	//krnl_ydma.setArg(6, INPUT_SIZE);
 	krnl_ydma.setArg(6, OUTPUT_SIZE);
 
@@ -184,11 +148,17 @@ int main(int argc, char **argv)
     // ------------------------------------------------------------------------------------
     bool match = true;
     check_results(out2);
+    //for(int i=0; i<100; i++){
+    //	for(int j=0; j<16; j++)
+    //		printf("%d: %08x\n", i, (unsigned int) out2[i].range(j*32+31, j*32));
+		//std::cout << "out1[" << i << "]=" << out1[i] << std::endl;
+//	}
+
     // for(int i=0; i<CONFIG_SIZE; i++){
     for(int i=0; i<CONFIG_SIZE; i++){
-        printf("%d: %08x_%08x\n", i, (unsigned int)out1[i].range(63, 32), (unsigned int) out1[i].range(31, 0));
-    	//std::cout << "out1[" << i << "]=" << out1[i] << std::endl;
-    }
+            printf("%d: %08x_%08x\n", i, (unsigned int)out1[i].range(63, 32), (unsigned int) out1[i].range(31, 0));
+        	//std::cout << "out1[" << i << "]=" << out1[i] << std::endl;
+        }
     
     delete[] fileBuf;
 
@@ -246,56 +216,12 @@ char *read_binary_file(const std::string &xclbin_file_name, unsigned &nb)
     return buf;
 }
 
-void check_results(bit32* output)
+void check_results(bit512* output)
 {
-  #ifndef SW
-    bit8 frame_buffer_print[MAX_X][MAX_Y];
-
-    // read result from the 32-bit output buffer
-    for (int i = 0, j = 0, n = 0; n < NUM_FB; n ++ )
-    {
-      bit32 temp = output[n];
-      frame_buffer_print[i][j++] = temp(7,0);
-      frame_buffer_print[i][j++] = temp(15,8);
-      frame_buffer_print[i][j++] = temp(23,16);
-      frame_buffer_print[i][j++] = temp(31,24);
-      if(j == MAX_Y)
-      {
-        i++;
-        j = 0;
-      }
+  for(int i=0; i<OUTPUT_SIZE; i++){
+    for(int j=0; j<16; j++){
+      std::cout << (unsigned int) (output[i](32*j+31, 32*j)) << "_";
     }
-  #endif
-
-  // print result
-  {
-    for (int j = MAX_X - 1; j >= 0; j -- )
-    {
-      for (int i = 0; i < MAX_Y; i ++ )
-      {
-        int pix;
-        pix = frame_buffer_print[i][j].to_int();
-        if (pix){
-          std::cout << "1";
-        }else{
-          std::cout << "0";
-        }
-      }
-      std::cout << std::endl;
-    }
+    std::cout << std::endl;
   }
-
 }
-/*
-void check_results(bit32* output)
-{
-  #ifndef SW
-
-    // read result from the 32-bit output buffer
-    for (int i = 0; i<NUM_FB; i++)
-    {
-      printf("i=%d, %d\n", i, (int) output[i]); 
-    }
-  #endif
-}
-*/

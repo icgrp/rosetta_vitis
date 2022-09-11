@@ -30,7 +30,7 @@ const int NUM_3D_TRI = 3192;
   typedef ap_uint<16> bit16;
   typedef ap_uint<32> bit32;
   typedef ap_uint<64> bit64;
-
+  typedef ap_uint<512> bit512;
 
 // struct: 3D triangle
 typedef struct
