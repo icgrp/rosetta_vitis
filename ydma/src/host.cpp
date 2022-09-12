@@ -37,8 +37,8 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 #define CONFIG_SIZE 4
-#define INPUT_SIZE (32768)
-#define OUTPUT_SIZE (32768)
+#define INPUT_SIZE  (655360)
+#define OUTPUT_SIZE (655360)
 
 
 // Forward declaration of utility functions included at the end of this file
