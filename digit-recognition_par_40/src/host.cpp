@@ -38,6 +38,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "typedefs.h"
 #include "training_data.h"
 #include "testing_data.h"
+#include <sys/time.h>
 
 
 // Forward declaration of utility functions included at the end of this file
@@ -50,6 +51,9 @@ void check_results(LabelType* result, const LabelType* expected, int cnt);
 // ------------------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
+    // Variables for time measurement
+    struct timeval start, end;
+
     // ------------------------------------------------------------------------------------
     // Step 1: Initialize the OpenCL environment
     // ------------------------------------------------------------------------------------
@@ -116,6 +120,8 @@ int main(int argc, char **argv)
     // Step 3: Run the kernel
     // ------------------------------------------------------------------------------------
     // Set kernel arguments
+    gettimeofday(&start, NULL);
+
     krnl_DigitRec.setArg(0, in1_buf);
     krnl_DigitRec.setArg(1, in2_buf);
     krnl_DigitRec.setArg(2, in3_buf);
@@ -129,6 +135,8 @@ int main(int argc, char **argv)
 
     // Wait for all scheduled operations to finish
     q.finish();
+    gettimeofday(&end, NULL);
+
 
     // ------------------------------------------------------------------------------------
     // Step 4: Check Results and Release Allocated Resources
@@ -137,6 +145,10 @@ int main(int argc, char **argv)
     check_results( result, expected, NUM_TEST );
 
     delete[] fileBuf;
+
+
+    long long elapsed = (end.tv_sec - start.tv_sec) * 1000000LL + end.tv_usec - start.tv_usec;   
+    printf("elapsed time: %lld us\n", elapsed);
 
     std::cout << "TEST " << (match ? "PASSED" : "FAILED") << std::endl;
     return (match ? EXIT_SUCCESS : EXIT_FAILURE);
