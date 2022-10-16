@@ -37,6 +37,8 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <CL/cl2.hpp>
 #include "typedefs.h"
 #include "input_data.h"
+#include <sys/time.h>
+
 
 // Forward declaration of utility functions included at the end of this file
 std::vector<cl::Device> get_xilinx_devices();
@@ -48,6 +50,9 @@ void check_results(bit32* output);
 // ------------------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
+
+    struct timeval start, end;
+
     // ------------------------------------------------------------------------------------
     // Step 1: Initialize the OpenCL environment
     // ------------------------------------------------------------------------------------
@@ -100,20 +105,22 @@ int main(int argc, char **argv)
     // ------------------------------------------------------------------------------------
     // Set kernel arguments
 
+    gettimeofday(&start, NULL);
 
-		krnl_rendering.setArg(0, in1_buf);
-		krnl_rendering.setArg(1, out_buf);
-		krnl_rendering.setArg(2, DATA_SIZE);
+    krnl_rendering.setArg(0, in1_buf);
+    krnl_rendering.setArg(1, out_buf);
+    krnl_rendering.setArg(2, DATA_SIZE);
 
 	//for(int i=0; i<10; i++){
 		// Schedule transfer of inputs to device memory, execution of kernel, and transfer of outputs back to host memory
-		q.enqueueMigrateMemObjects({in1_buf}, 0 /* 0 means from host*/);
-		q.enqueueTask(krnl_rendering);
-		q.enqueueMigrateMemObjects({out_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
+    q.enqueueMigrateMemObjects({in1_buf}, 0 /* 0 means from host*/);
+    q.enqueueTask(krnl_rendering);
+    q.enqueueMigrateMemObjects({out_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
 	//}
 
 		// Wait for all scheduled operations to finish
-		q.finish();
+    q.finish();
+    gettimeofday(&end, NULL);
 
 
     // ------------------------------------------------------------------------------------
@@ -123,6 +130,9 @@ int main(int argc, char **argv)
     check_results(out);
 
     delete[] fileBuf;
+
+    long long elapsed = (end.tv_sec - start.tv_sec) * 1000000LL + end.tv_usec - start.tv_usec;
+    printf("elapsed time: %lld us\n", elapsed);
 
     std::cout << "TEST " << (match ? "PASSED" : "FAILED") << std::endl;
     return (match ? EXIT_SUCCESS : EXIT_FAILURE);
