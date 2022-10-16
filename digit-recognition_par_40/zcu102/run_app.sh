@@ -11,6 +11,6 @@
 #export XILINX_XRT=/usr
 #export XILINX_VITIS=/mnt
 
-./app.exe 
+./app.exe DigitRec.xclbin
 
 #echo "INFO: press Ctrl+a x to exit qemu"
