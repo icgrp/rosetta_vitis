@@ -39,6 +39,7 @@ If you do
 python report.py
 ```
 it will parse compile time for the benchmarks that have been built.
+Note that rtdgen, cf2sw, xclbinutil, etc, and v++ -p times are not included.
 
 ## Run Benchmarks on ZCU102
 Write the `<BENCHMARK_DIR>/package/sd_card.img` to the SD card and boot the board.
