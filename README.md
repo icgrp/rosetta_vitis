@@ -34,6 +34,12 @@ cd to [./3d-rendering/zcu102](./3d-rendering/zcu102) and do below:
 ```
 The command is the same for other benchmarks.
 
+If you do 
+```bash
+python report.py
+```
+it will parse compile time for the benchmarks that have been built.
+
 ## Run Benchmarks on ZCU102
 Write the `<BENCHMARK_DIR>/package/sd_card.img` to the SD card and boot the board.
 
