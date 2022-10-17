@@ -86,16 +86,21 @@ def main():
                         time_viv_end = line.split()[9]
                 #print(time_viv_end) # e.g.: 22:36:08
             
-            
-            elapsed_syn = (datetime.strptime(time_syn_end, date_format) - datetime.strptime(time_viv_start, date_format) + syn_extra).seconds
-            elapsed_bits = datetime.strptime(time_bits, date_format).minute*60 + datetime.strptime(time_bits, date_format).second
-            elapsed_pnr = (datetime.strptime(time_viv_end, date_format) - datetime.strptime(time_syn_end, date_format)).seconds - elapsed_bits
+            elapsed_syn = (datetime.strptime(time_syn_end, date_format) - \
+                           datetime.strptime(time_viv_start, date_format) + \
+                           syn_extra).seconds
+            elapsed_bits = datetime.strptime(time_bits, date_format).minute*60 + \
+                           datetime.strptime(time_bits, date_format).second
+            elapsed_pnr = (datetime.strptime(time_viv_end, date_format) - \
+                           datetime.strptime(time_syn_end, date_format)).seconds - \
+                           elapsed_bits
             elapsed_total = elapsed_hls + elapsed_syn + elapsed_pnr + elapsed_bits
             print("Benchmark" + "\t\t" + "HLS\t" + "Syn\t" + "P/R\t" + "Bits\t" + "Total")
-            print(benchmark + "\t\t" + str(elapsed_hls) + "\t" + str(elapsed_syn) + "\t" + str(elapsed_pnr) + "\t" + str(elapsed_bits) + "\t" + str(elapsed_total))
-        
+            print(benchmark + "\t\t" + str(elapsed_hls) + "\t" + \
+                                       str(elapsed_syn) + "\t" + \
+                                       str(elapsed_pnr) + "\t" + \
+                                       str(elapsed_bits) + "\t" + \
+                                       str(elapsed_total))
     
 if __name__ == '__main__':
     main()
-
-
