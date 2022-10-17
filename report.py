@@ -2,10 +2,20 @@ from datetime import datetime
 import os.path
 date_format = "%H:%M:%S"
 BOARD = 'zcu102'
-BENCHMARKS = {"3d-rendering", \
-              "digit-recognition_par_40", "digit_recognition_par_80", \
+BENCHMARKS = ["3d-rendering", \
+              "digit-recognition_par_40", "digit-recognition_par_80", \
               "optical-flow_64", "optical-flow_96_float", \
-              "spam-filter_par_32", "spam-filter_par_64"}
+              "spam-filter_par_32", "spam-filter_par_64"]
+
+def short_form(benchmark):
+    if(benchmark.startswith("digit")):
+        return benchmark.replace("-recognition","")
+    elif(benchmark.startswith("optical")):
+        return benchmark.replace("-flow","").replace("_float","")
+    elif(benchmark.startswith("spam")):
+        return benchmark.replace("-filter","")
+    else:
+        return benchmark
 
 # return True if ./package/sd_card.img exists
 def is_build_done(benchmark, benchmark_dir):
@@ -41,6 +51,9 @@ def convert_time_type1(t):
 # 3. There's some setup time before synthesis, which is syn_extra in the code below.
 #    It's generally 9~10 seconds, and added to elapsed_syn
 def main():
+    BENCHMARKS.sort()
+    print("Benchmark" + "\t" + "HLS\t" + "Syn\t" + "P/R\t" + "Bits\t" + "Total")
+    print("-------------------------------------------------------------")
     for benchmark in BENCHMARKS:
         benchmark_dir = "./" + benchmark + "/" + BOARD +"/"
         if(is_build_done(benchmark, benchmark_dir)):
@@ -95,8 +108,7 @@ def main():
                            datetime.strptime(time_syn_end, date_format)).seconds - \
                            elapsed_bits
             elapsed_total = elapsed_hls + elapsed_syn + elapsed_pnr + elapsed_bits
-            print("Benchmark" + "\t\t" + "HLS\t" + "Syn\t" + "P/R\t" + "Bits\t" + "Total")
-            print(benchmark + "\t\t" + str(elapsed_hls) + "\t" + \
+            print(short_form(benchmark) + "\t" + str(elapsed_hls) + "\t" + \
                                        str(elapsed_syn) + "\t" + \
                                        str(elapsed_pnr) + "\t" + \
                                        str(elapsed_bits) + "\t" + \
