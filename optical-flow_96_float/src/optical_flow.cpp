@@ -2,7 +2,7 @@
 #include "stdio.h"
 #include <cassert>
 // use HLS video library
-#include <multimediaIps/xf_video_mem.hpp>
+#include "/tools/Xilinx/Vivado/2021.1/include/multimediaIps/xf_video_mem.hpp"
 
 
 // define these constants so they can be used in pragma
@@ -258,8 +258,8 @@ void tensor_weight_y(outer_t outer[MAX_HEIGHT][MAX_WIDTH],
       #pragma HLS pipeline II=1
       
       outer_t tmp;
-      #pragma HLS data_pack variable=tmp
-      #pragma HLS data_pack variable=buf.val[0]
+      #pragma HLS aggregate variable=tmp
+      #pragma HLS aggregate variable=buf.val[0]
       buf.shift_pixels_up(c);
       if(r<MAX_HEIGHT)
       {
@@ -360,11 +360,12 @@ void flow_calc(tensor_t tensors[MAX_HEIGHT][MAX_WIDTH],
     FLOW_INNER: for(int c=0; c<MAX_WIDTH; c++)
     {
       #pragma HLS pipeline II=1
-      // tensor_t tmp_tensor = tensors[r][c];
-      tensor_t tmp_tensor;
-      for(int i=0;i<6;i++){
-        tmp_tensor.val[i] = tensors[r][c].val[i]; // the only difference
-      }
+      tensor_t tmp_tensor = tensors[r][c];
+      // tensor_t tmp_tensor;
+      // #pragma HLS aggregate variable=tmp_tensor
+      // for(int i=0;i<6;i++){
+      //   tmp_tensor.val[i] = tensors[r][c].val[i]; // the only difference
+      // }
 
       if(r>=2 && r<MAX_HEIGHT-2 && c>=2 && c<MAX_WIDTH-2)
       {
@@ -416,7 +417,7 @@ extern "C" {
 		#pragma HLS INTERFACE m_axi port=frames bundle=aximm1
 		#pragma HLS INTERFACE m_axi port=outputs bundle=aximm1
 
-		#pragma HLS data_pack variable=outputs
+		#pragma HLS aggregate variable=outputs
 
 		#pragma HLS DATAFLOW
 
@@ -433,13 +434,13 @@ extern "C" {
 		#pragma HLS STREAM variable=filtered_gradient depth=default_depth
 		static outer_t out_product[MAX_HEIGHT][MAX_WIDTH];
 		#pragma HLS STREAM variable=out_product depth=default_depth
-		#pragma HLS data_pack variable=out_product
+		#pragma HLS aggregate variable=out_product
 		static tensor_t tensor_y[MAX_HEIGHT][MAX_WIDTH];
 		#pragma HLS STREAM variable=tensor_y depth=default_depth
-		#pragma HLS data_pack variable=tensor_y
+		#pragma HLS aggregate variable=tensor_y
 		static tensor_t tensor[MAX_HEIGHT][MAX_WIDTH];
 		#pragma HLS STREAM variable=tensor depth=default_depth
-		#pragma HLS data_pack variable=tensor
+		#pragma HLS aggregate variable=tensor
 
 		// FIFOs for streaming in, just for clarity
 		static input_t frame1_a[MAX_HEIGHT][MAX_WIDTH];

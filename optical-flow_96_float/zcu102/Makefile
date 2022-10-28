@@ -6,7 +6,6 @@ all: package/sd_card.img
 
 app.exe: ../src/host.cpp $(img_obj)
 	${CXX} -Wall -g -std=c++11 ../src/host.cpp $(img_obj) -o app.exe \
-		-I/usr/include/xrt \
 		-I${XILINX_VIVADO}/include \
 		-lOpenCL \
 		-lpthread \
@@ -17,9 +16,9 @@ $(img_obj):$(SRC_DIR)/%.o:$(SRC_DIR)/%.cpp
 	$(CXX) -Wall -g -std=c++11 -c $^ -o $@
 
 
-${kl_name}.xo: ../src/${kl_name}.cpp ../src/zcu102.cfg
+${kl_name}.xo: ../src/${kl_name}.cpp ../src/typedefs.h ../src/zcu102.cfg
 	v++ -c -t hw --config ../src/zcu102.cfg --kernel_frequency 200 -k ${kl_name} \
-		-I../src -I${XILINX_VIVADO}/include ../src/${kl_name}.cpp -o ${kl_name}.xo 
+		../src/${kl_name}.cpp -o ${kl_name}.xo 
 
 ${kl_name}.xclbin: ./${kl_name}.xo
 	v++ -l -t hw --config ../src/zcu102.cfg ./${kl_name}.xo \
