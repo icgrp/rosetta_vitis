@@ -3,12 +3,8 @@ all: package/sd_card.img
 
 app.exe: ../src/host.cpp
 	${CXX} -Wall -g -std=c++11 ../src/host.cpp -o app.exe \
-		-I/usr/include/xrt \
 		-I${XILINX_VIVADO}/include \
-		-lOpenCL \
-		-lpthread \
-		-lrt \
-		-lstdc++
+		-lOpenCL -lpthread -lrt -lstdc++
 
 ${kl_name}.xo: ../src/${kl_name}.cpp ../src/zcu102.cfg
 	v++ -c -t hw --config ../src/zcu102.cfg --kernel_frequency 200 -k ${kl_name} \

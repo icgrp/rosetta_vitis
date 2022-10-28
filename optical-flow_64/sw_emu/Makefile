@@ -11,9 +11,8 @@ all: package/sd_card.img
 
 app.exe: $(SRC_DIR)/host.cpp $(img_obj)
 	${CXX} -Wall -g -std=c++11 $(SRC_DIR)/host.cpp $(img_obj) -o app.exe \
-		-I${XILINX_XRT}/include/ \
 		-I${XILINX_VIVADO}/include/ \
-		-L${XILINX_XRT}/lib/ -lOpenCL -lpthread -lrt -lstdc++
+		-lOpenCL -lpthread -lrt -lstdc++
 
 $(img_obj):$(SRC_DIR)/%.o:$(SRC_DIR)/%.cpp 
 	${CXX} -Wall -g -std=c++11 -c $^ -o $@

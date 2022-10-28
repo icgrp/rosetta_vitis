@@ -3,7 +3,6 @@ all: package/sd_card.img
 
 app.exe: ../src/host.cpp
 	${CXX} -Wall -g -std=c++11 ../src/host.cpp -o app.exe \
-		-I/usr/include/xrt \
 		-I${XILINX_VIVADO}/include \
 		-lOpenCL -lpthread -lrt -lstdc++
 

@@ -7,9 +7,8 @@ all: package/sd_card.img
 
 app.exe: $(SRC_DIR)/host.cpp
 	${CXX} -Wall -g -std=c++11 $(SRC_DIR)/host.cpp -o app.exe \
-		-I${XILINX_XRT}/include/ \
 		-I${XILINX_VIVADO}/include/ \
-		-L${XILINX_XRT}/lib/ -lOpenCL -lpthread -lrt -lstdc++
+		-lOpenCL -lpthread -lrt -lstdc++
 	
 $(PRJ_NAME).xo: $(SRC_DIR)/$(PRJ_NAME).cpp
 	v++ -c -t ${TARGET} --config $(SRC_DIR)/zcu102.cfg -k $(PRJ_NAME) \
