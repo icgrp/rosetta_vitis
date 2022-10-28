@@ -1,6 +1,9 @@
 # Rosetta Benchmark on ZCU102
 The code here is verified in ZCU102 with Vitis 2021.1. 
 Original Rosetta benchmark repo is [here](https://github.com/cornell-zhang/rosetta).
+When compiling optical flow benchmark, please adjust
+[xf_video_mem.hpp](https://github.com/icgrp/rosetta_vitis/blob/zcu102(2021.1)/optical-flow_64/src/optical_flow.cpp#L5)
+location.
 
 ## About benchmarks
 - **Optical Flow, 64**: In [./optical-flow_64/src/typedefs.h](./optical-flow_64/src/typedefs.h)
