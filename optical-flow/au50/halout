@@ -1,0 +1,487 @@
+FUNCTION, THREAD ID, ARG...
+xclLoadXclBin, 140073619224384
+xclLoadXclBin flow_id : 10 route_id : 0 inst addr : 0 arg_id : 0
+xclLoadXclBin flow_id : 0 route_id : 17179869184 inst addr : 0 arg_id : 1
+xclLoadXclBin flow_id : 0 route_id : 17179869184 inst addr : 0 arg_id : 0
+xclLoadXclBin flow_id : 65586 route_id : 65536 inst addr : 65536 arg_id : 1
+xclLoadXclBin setup instance: 0 success 1
+xclLoadXclBin flow_id : 131142 route_id : 131072 inst addr : 131072 arg_id : 0
+xclLoadXclBin setup instance: 65536 success 1
+xclLoadXclBin flow_id : 0 route_id : 17179869184 inst addr : 0 arg_id : 1
+xclLoadXclBin setup instance: 131072 success 1
+xclLoadXclBin flow_id : 0 route_id : 17179869184 inst addr : 0 arg_id : 0
+xclLoadXclBin flow_id : 196718 route_id : 196608 inst addr : 196608 arg_id : 1
+xclLoadXclBin setup instance: 0 success 1
+xclLoadXclBin flow_id : 262274 route_id : 262144 inst addr : 262144 arg_id : 0
+xclLoadXclBin setup instance: 196608 success 1
+xclLoadXclBin flow_id : 0 route_id : 17179869184 inst addr : 0 arg_id : 1
+xclLoadXclBin setup instance: 262144 success 1
+xclLoadXclBin flow_id : 327790 route_id : 327680 inst addr : 327680 arg_id : 0
+xclLoadXclBin setup instance: 0 success 1
+xclLoadXclBin flow_id : 327810 route_id : 327680 inst addr : 327680 arg_id : 1
+xclLoadXclBin flow_id : 327860 route_id : 327680 inst addr : 327680 arg_id : 2
+xclLoadXclBin flow_id : 327750 route_id : 327680 inst addr : 327680 arg_id : 3
+xclLoadXclBin flow_id : 327730 route_id : 327680 inst addr : 327680 arg_id : 4
+xclLoadXclBin flow_id : 327690 route_id : 327680 inst addr : 327680 arg_id : 5
+xclLoadXclBin flow_id : 0 route_id : 17179869184 inst addr : 0 arg_id : 0
+xclLoadXclBin setup instance: 327680 success 1
+xclLoadXclBin flow_id : 393396 route_id : 393216 inst addr : 393216 arg_id : 1
+xclLoadXclBin setup instance: 0 success 1
+xclLoadXclBin setup instance: 393216 success 1
+xclAllocBO, 140073619224384, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, 0, 1
+xclMapBO ended 
+xclExecBuf, 7f656e50f740, 0
+xclExecBuf ended 
+xclFreeBO, 7f656e50f740, 0
+xclFreeDeviceBuffer, 7f656e50f740, 0
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclAllocBO, 7f656e50f740, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, 1, 1
+xclMapBO ended 
+xclAllocBO, 7f656e50f740, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, 2, 1
+xclMapBO ended 
+xclAllocBO, 7f656e50f740, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, 3, 1
+xclMapBO ended 
+xclAllocBO, 7f656e50f740, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, 4, 1
+xclMapBO ended 
+xclAllocBO, 7f656e50f740, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, 5, 1
+xclMapBO ended 
+xclAllocBO, 7f656e50f740, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, 6, 1
+xclMapBO ended 
+xclAllocUserPtrBO, 7f656e50f740, 0x55fbb0b58000, 20 , 16777216
+xoclCreateBo, 140073619224384, isCacheable: 1, memCheck: 0, zeroCopy: 0
+xclAllocDeviceBuffer2 , 140073619224384, 32, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocUserPtrBO ended 
+xclAllocUserPtrBO, 140073619224384, 0x55fbb0b59000, 10000 , 16777216
+xoclCreateBo, 140073619224384, isCacheable: 1, memCheck: 0, zeroCopy: 0
+xclAllocDeviceBuffer2 , 140073619224384, 65536, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocUserPtrBO ended 
+xclAllocUserPtrBO, 140073619224384, 0x55fbb0b6a000, 70 , 16777216
+xoclCreateBo, 140073619224384, isCacheable: 1, memCheck: 0, zeroCopy: 0
+xclAllocDeviceBuffer2 , 140073619224384, 112, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocUserPtrBO ended 
+xclAllocUserPtrBO, 140073619224384, 0x55fbb0b6b000, 20 , 16777216
+xoclCreateBo, 140073619224384, isCacheable: 1, memCheck: 0, zeroCopy: 0
+xclAllocDeviceBuffer2 , 140073619224384, 32, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocUserPtrBO ended 
+xclAllocUserPtrBO, 140073619224384, 0x55fbb0b6c000, 10000 , 16777216
+xoclCreateBo, 140073619224384, isCacheable: 1, memCheck: 0, zeroCopy: 0
+xclAllocDeviceBuffer2 , 140073619224384, 65536, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocUserPtrBO ended 
+xclAllocUserPtrBO, 140073619224384, 0x55fbb0b7d000, 70 , 16777216
+xoclCreateBo, 140073619224384, isCacheable: 1, memCheck: 0, zeroCopy: 0
+xclAllocDeviceBuffer2 , 140073619224384, 112, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocUserPtrBO ended 
+xclAllocBO, 140073619224384, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, d, 1
+xclMapBO ended 
+xclGetBOProperties, 7f65637fe700, 7
+xclGetBOProperties ended 
+xclGetBOProperties, 7f6568b13700, 7
+xclGetBOProperties ended 
+xclSyncBO, 7f6568b13700, 7 , 
+xclCopyBufferHost2Device, 7f6568b13700, 7000, 0x55fbb0b58000, 20, 0
+xclSyncBO ended 
+xclSyncBO, 7f65637fe700, 7 , 
+xclCopyBufferHost2Device, 7f65637fe700, 7000, 0x55fbb0b58000, 20, 0
+xclSyncBO ended 
+xclGetBOProperties, 7f656e50f740, 7
+xclGetBOProperties ended 
+xclExecBuf, 7f656e50f740, d
+xclExecBuf ended 
+xclAllocBO, 7f656e50f740, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, e, 1
+xclMapBO ended 
+xclGetBOProperties, 7f656e50f740, a
+xclGetBOProperties ended 
+xclWrite, 7f656a316700, 30000, 0x7f656e52d008, 20
+xclWrite ended 
+xclWrite, 7f656a316700, 30000, 0x7f656e52d008, 20
+xclWrite ended 
+xclRead, 7f656a316700, 2, 30000, 0x7f65640013f4, 4
+xclRead ended 
+xclGetBOProperties, 7f6568b13700, a
+xclGetBOProperties ended 
+xclSyncBO, 7f6568b13700, a , 
+xclCopyBufferHost2Device, 7f6568b13700, 19000, 0x55fbb0b6b000, 20, 0
+xclSyncBO ended 
+xclExecBuf, 7f6568b13700, e
+xclExecBuf ended 
+xclWrite, 7f656a316700, 40000, 0x7f656e52c008, 20
+xclWrite ended 
+xclWrite, 7f656a316700, 40000, 0x7f656e52c008, 20
+xclWrite ended 
+xclRead, 7f656a316700, 2, 40000, 0x7f65640016d4, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 40000, 0x7f65640016d4, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 40000, 0x7f65640016d4, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 40000, 0x7f65640016d4, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 40000, 0x7f65640016d4, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 40000, 0x7f65640016d4, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 40000, 0x7f65640016d4, 4
+xclRead ended 
+xclSyncBO, 7f6563fff700, a , 
+xclCopyBufferDevice2Host, 7f6563fff700, 0x55fbb0b6b000, 19000, 20, 0
+xclSyncBO ended 
+xclAllocBO, 7f656e50f740, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, f, 1
+xclMapBO ended 
+xclGetBOProperties, 7f65637fe700, 8
+xclGetBOProperties ended 
+xclSyncBO, 7f65637fe700, 8 , 
+xclCopyBufferHost2Device, 7f65637fe700, 8000, 0x55fbb0b59000, 10000, 0
+xclSyncBO ended 
+xclSyncBO, 7f65637fe700, 8 , 
+xclCopyBufferHost2Device, 7f65637fe700, 8000, 0x55fbb0b59000, 10000, 0
+xclSyncBO ended 
+xclAllocBO, 7f656e50f740, 1000 , 0 , 2147483648
+xoclCreateBo, 140073619224384, isCacheable: 0, memCheck: 0, zeroCopy: 1
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+eck: 0, zeroCopy: 1
+xclExecBuf, 140073437751040, 15
+xclAllocDeviceBuffer2 , 140073619224384, 4096, 1, 0
+xclExecBuf ended 
+xclAllocDeviceBuffer2 ended 
+xclAllocBO ended 
+xclMapBO, 140073619224384, 10, 1
+xclMapBO ended 
+xclWrite, 7f656a316700, 60000, 0x7f656e52b008, 20
+xclWrite ended 
+xclWrite, 7f656a316700, 60000, 0x7f656e52b008, 20
+xclWrite ended 
+xclRead, 7f656a316700, 2, 60000, 0x7f6564001c94, 4
+xclRead ended 
+xclGetBOProperties, 7f6568b13700, b
+xclGetBOProperties ended 
+xclSyncBO, 7f6568b13700, b , 
+xclCopyBufferHost2Device, 7f6568b13700, 1a000, 0x55fbb0b6c000, 10000, 0
+xclSyncBO ended 
+xclGetBOProperties, 7f656e50f740, b
+xclGetBOProperties ended 
+xclRead, 7f656a316700, 2, 60000, 0x7f6564001c94, 4
+xclExecBuf, 7f656e50f740, 10
+xclRead ended 
+xclExecBuf ended 
+xclRead, 7f656a316700, 2, 60000, 0x7f6564001c94, 4
+xclRead ended 
+xclWrite, 7f656a316700, 20000, 0x7f656e52a008, 20
+xclWrite ended 
+xclWrite, 7f656a316700, 20000, 0x7f656e52a008, 20
+xclWrite ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclRead, 7f656a316700, 2, 20000, 0x7f6564001114, 4
+xclRead ended 
+xclSyncBO, 7f6569314700, b , 
+xclCopyBufferDevice2Host, 7f6569314700, 0x55fbb0b6c000, 1a000, 10000, 0
+xclSyncBO ended 
+xclFreeBO, 7f656e50f740, c
+xclFreeDeviceBuffer, 7f656e50f740, 2a000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 9
+xclFreeDeviceBuffer, 7f656e50f740, 18000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, b
+xclFreeDeviceBuffer, 7f656e50f740, 1a000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 8
+xclFreeDeviceBuffer, 7f656e50f740, 8000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, a
+xclFreeDeviceBuffer, 7f656e50f740, 19000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, d
+xclFreeDeviceBuffer, 7f656e50f740, 2b000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, f
+xclFreeDeviceBuffer, 7f656e50f740, 2d000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, e
+xclFreeDeviceBuffer, 7f656e50f740, 2c000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 10
+xclFreeDeviceBuffer, 7f656e50f740, 2e000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 6
+xclFreeDeviceBuffer, 7f656e50f740, 6000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 3
+xclFreeDeviceBuffer, 7f656e50f740, 3000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 5
+xclFreeDeviceBuffer, 7f656e50f740, 5000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 2
+xclFreeDeviceBuffer, 7f656e50f740, 2000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 4
+xclFreeDeviceBuffer, 7f656e50f740, 4000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 1
+xclFreeDeviceBuffer, 7f656e50f740, 1000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclFreeBO, 7f656e50f740, 7
+xclFreeDeviceBuffer, 7f656e50f740, 7000
+xclFreeDeviceBuffer ended 
+xclFreeBO ended 
+xclClose, 7f656e50f740
+xclClose ended 

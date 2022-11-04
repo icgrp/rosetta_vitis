@@ -23,7 +23,7 @@ XF_PROJ_ROOT = $(shell readlink -f $(COMMON_REPO))
 
 ########################## Checking if PLATFORM in allowlist #######################
 PLATFORM_BLOCKLIST += 2018 qep aws-vu9p-f1 samsung u2_ zc702 nodma 
-PLATFORM ?= xilinx_zcu102_base_dfx_202210_1
+PLATFORM ?= u96v2_sbc_base
 DEV_ARCH := $(shell platforminfo -p $(PLATFORM) | grep 'FPGA Family' | sed 's/.*://' | sed '/ai_engine/d' | sed 's/^[[:space:]]*//')
 CPU_TYPE := $(shell platforminfo -p $(PLATFORM) | grep 'CPU Type' | sed 's/.*://' | sed '/ai_engine/d' | sed 's/^[[:space:]]*//')
 
