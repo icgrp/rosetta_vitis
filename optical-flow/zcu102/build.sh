@@ -5,6 +5,6 @@ set -e
 source /scratch/unsafe/Xilinx/Vitis/2022.1/settings64.sh
 
 # Make sure everything is up to date
-make TARGET=hw ACCEL=MONO PLATFORM=xilinx_zcu102_base_dfx_202210_1 EDGE_COMMON_SW=/scratch/unsafe/Xilinx/xilinx-zynqmp-common-v2022.1/sdk/ all $(nproc) 
+make TARGET=hw ACCEL=MONO PLATFORM=xilinx_zcu102_base_dfx_202210_1 EDGE_COMMON_SW=/scratch/unsafe/Xilinx/xilinx-zynqmp-common-v2022.1/sdk/ all -j$(nproc) 
 
 
